@@ -238,12 +238,61 @@
         .footer-nav a:hover { color: var(--gold); }
         .footer-copy { font-size: 0.72rem; color: rgba(138,126,110,0.45); letter-spacing: 0.05em; }
 
+        /* FAST FOOD HACKS */
+        .ff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+            gap: 1.5rem;
+        }
+        .ff-card {
+            background: var(--card); border: 1px solid var(--border);
+            padding: 2rem; transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .ff-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .ff-card:hover { background: var(--card-hover); border-color: rgba(200,169,110,0.25); transform: translateY(-2px); }
+        .ff-card:hover::after { opacity: 1; }
+        .ff-chain {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem; font-weight: 500; color: var(--cream);
+            margin-bottom: 1.2rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+        }
+        .ff-move {
+            background: rgba(200,169,110,0.05);
+            border-left: 2px solid var(--gold);
+            padding: 0.85rem 1.1rem; margin-bottom: 1.5rem;
+            font-size: 0.845rem; color: var(--muted); line-height: 1.65;
+        }
+        .ff-move-label {
+            font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase;
+            color: var(--gold); font-weight: 600; margin-bottom: 0.4rem;
+        }
+        .ff-items { display: flex; flex-direction: column; }
+        .ff-item {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(46,43,36,0.5);
+        }
+        .ff-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .ff-item-info { flex: 1; }
+        .ff-item-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.96rem; font-weight: 500; color: var(--cream); margin-bottom: 0.22rem;
+        }
+        .ff-item-desc { font-size: 0.79rem; color: var(--muted); line-height: 1.55; }
+        .ff-item-macros { display: flex; flex-direction: column; gap: 0.28rem; align-items: flex-end; flex-shrink: 0; }
+
         /* SCROLL FADE */
         .fade { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade.on { opacity: 1; transform: none; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .ff-grid { grid-template-columns: 1fr; }
+            .ff-item { flex-direction: column; gap: 0.5rem; }
+            .ff-item-macros { flex-direction: row; }
             .nav-sub { display: none; }
             .nav-links {
                 display: none; position: absolute; top: 64px; left: 0; right: 0;
@@ -271,6 +320,7 @@
             <li><a href="#dinner">Dinner</a></li>
             <li><a href="#snacks">Snacks</a></li>
             <li><a href="#drinks">Drinks</a></li>
+            <li><a href="#fastfood">Fast Food</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Open menu">
             <span></span><span></span><span></span>
@@ -723,6 +773,348 @@
     </div>
 </section>
 
+<!-- FAST FOOD HACKS -->
+<section id="fastfood">
+    <div class="section-inner">
+        <div class="section-header fade">
+            <div class="section-eyebrow">Field Guide</div>
+            <h2 class="section-title">Fast Food Hacks</h2>
+            <p class="section-desc">Know what to order before you walk through the door. The best macro plays at the chains you actually eat at.</p>
+        </div>
+        <div class="ff-grid">
+
+            <!-- CHICK-FIL-A -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Chick-fil-A</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Order the Grilled Cool Wrap without even looking at the rest of the menu. 42g protein for 350 calories is better than most things you could make at home. Need more? Add an 8-count grilled nuggets on the side and you're at 67g protein for 490 cal total.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Grilled Cool Wrap</div>
+                            <div class="ff-item-desc">Grilled chicken, lettuce, cheese in a flaxseed flatbread. The best macro item at any fast food chain, period. Ask for the dressing on the side.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~42g</span>
+                            <span class="badge badge-c">350 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Grilled Nuggets — 8 Count</div>
+                            <div class="ff-item-desc">25g protein for 140 calories. The most efficient item on the menu by a wide margin. Pair with a fruit cup if you need volume.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~25g</span>
+                            <span class="badge badge-c">140 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Market Salad (Grilled Chicken)</div>
+                            <div class="ff-item-desc">Grilled chicken, apple, berries, blue cheese crumbles, granola. Use the light balsamic — skip the full dressing packet, it doubles the calories.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~30g</span>
+                            <span class="badge badge-c">~340 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TACO BELL -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Taco Bell</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Cantina Chicken Bowl, Fresco style. "Fresco" swaps out cheese and sour cream for pico de gallo — saves ~100 cal with zero protein loss. Avoid the creamy jalapeño sauce, the beef options, and the nachos fries that will show up on every screen you walk past.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Cantina Chicken Bowl</div>
+                            <div class="ff-item-desc">Rice, black beans, grilled chicken, pico, avocado ranch. The most complete macro meal on the Taco Bell menu. Get it Fresco to cut calories.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~32g</span>
+                            <span class="badge badge-c">~490 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Chicken Power Bowl (Fresco)</div>
+                            <div class="ff-item-desc">Grilled chicken, rice, black beans, guac, reduced-cal with the Fresco swap. Solid backup when the Cantina Bowl is sold out.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~26g</span>
+                            <span class="badge badge-c">~370 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Chicken Soft Tacos × 3 (Fresco)</div>
+                            <div class="ff-item-desc">Three is the number. Fresco cuts the cheese and sour cream. Each runs about 160 cal. Easy to eat, easy on the macros.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~27g</span>
+                            <span class="badge badge-c">~480 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WENDY'S -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Wendy's</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Grilled Chicken Sandwich + Small Chili instead of fries. That's ~50g protein for ~530 cal total and the chili genuinely earns its spot — it's not an afterthought. Ask for mayo on the side or skip it entirely.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Grilled Chicken Sandwich</div>
+                            <div class="ff-item-desc">Full chicken breast, good bun, legitimately good. No mayo or on the side. Skip the combo upgrade — the fries aren't worth it here.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~34g</span>
+                            <span class="badge badge-c">~370 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Small Chili</div>
+                            <div class="ff-item-desc">The most underrated side in fast food. Beans, ground beef, tomatoes, spices. 16g protein for 160 cal. Pair it with anything — it always works.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~16g</span>
+                            <span class="badge badge-c">~160 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Grilled Chicken Wrap</div>
+                            <div class="ff-item-desc">Light option when you want something smaller. Ranch on the side. Pairs well with the chili or a side salad to round out the meal.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~24g</span>
+                            <span class="badge badge-c">~270 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TACO TIME -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Taco Time</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Three Chicken Soft Tacos is your order. Skip the Mexi Fries unless you've saved the budget — they're great but burn 400+ cal on a side. Ask for light cheese and no sour cream to tighten it up without losing any of the experience.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Chicken Soft Tacos × 3</div>
+                            <div class="ff-item-desc">Their best high-protein order. Light cheese, no sour cream. Salsa keeps it honest and still tastes exactly right. This is the play.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~27g</span>
+                            <span class="badge badge-c">~450 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Chicken Burrito</div>
+                            <div class="ff-item-desc">Good when you want volume and something more filling. Skip the sour cream inside, use salsa instead. Stays manageable.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~28g</span>
+                            <span class="badge badge-c">~520 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Crispy Chicken Tacos × 2</div>
+                            <div class="ff-item-desc">Their classic. Slightly higher cal than soft but worth it occasionally. Don't add extra sauce — the taco is already seasoned well.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~22g</span>
+                            <span class="badge badge-c">~420 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHIPOTLE -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Chipotle</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Double chicken bowl. Brown rice, black beans, fajita veggies, fresh salsa, guac. The double protein is ~$3 more and takes you from 21g to 42g — that's the only math that matters. Skip the sour cream and use salsa as your sauce.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Double Chicken Burrito Bowl</div>
+                            <div class="ff-item-desc">Brown rice, black beans, fajita veggies, fresh salsa, guac. This is the Provision house order, made off-site. No-brainer every time.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~42g</span>
+                            <span class="badge badge-c">~683 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Single Chicken Bowl (Cauliflower Rice)</div>
+                            <div class="ff-item-desc">Swap brown rice for cauli rice — cuts ~170 cal, same protein. Black beans and fajita veggies keep the volume up. Good on lighter days.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~32g</span>
+                            <span class="badge badge-c">~380 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Double Steak Bowl</div>
+                            <div class="ff-item-desc">Same build as the chicken bowl. Steak runs slightly higher fat but the protein numbers hold. Change of pace without changing the strategy.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~40g</span>
+                            <span class="badge badge-c">~700 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMINO'S -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Domino's</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Thin crust loaded with grilled chicken, two slices max — then add a boneless chicken order on the side to actually hit your protein. You came for pizza. Get the pizza. Just don't let it be the only protein on the table.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Thin Crust Chicken Pizza (2 slices)</div>
+                            <div class="ff-item-desc">Half the carbs of hand-tossed. Grilled chicken topping, marinara base. Two slices is a real portion. Resist the third.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~22g</span>
+                            <span class="badge badge-c">~360 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Boneless Chicken — 8pc (Buffalo or Plain)</div>
+                            <div class="ff-item-desc">The protein filler. Buffalo or plain, not the sweet sauces. Closes the gap the pizza leaves. This is why you're having a good pizza night instead of a bad one.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~26g</span>
+                            <span class="badge badge-c">~290 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">The Combo: 2 Slices + 8pc Chicken</div>
+                            <div class="ff-item-desc">~48g protein for ~650 cal total. That's a legitimate pizza night without torching the week. Skip the crazy bread.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~48g</span>
+                            <span class="badge badge-c">~650 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHAKE SHACK -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Shake Shack</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Grilled Chicken Sandwich, no ChickShack sauce — swap it for mustard. That one swap saves ~100 cal and you won't miss it. The chicken itself is genuinely excellent. Going bunless on any burger is also always an option if you want to keep the carbs in check.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Grilled Chicken Sandwich</div>
+                            <div class="ff-item-desc">Full chicken breast, brioche bun, lettuce, pickles, cherry pepper sauce. No ChickShack sauce — mustard instead. One of the best fast food chicken sandwiches made, and the numbers hold up.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~40g</span>
+                            <span class="badge badge-c">~390 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">ShackBurger Single — No Bun</div>
+                            <div class="ff-item-desc">Beef patty, American, lettuce, tomato, ShackSauce in a lettuce wrap. High fat but manageable on the calories. Feels premium, because it is.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~22g</span>
+                            <span class="badge badge-c">~340 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">SmokeShack Single</div>
+                            <div class="ff-item-desc">Smoked bacon, cherry peppers, ShackSauce. Worth it occasionally — go bunless to keep it in check. This is the treat meal, not the everyday move.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~32g</span>
+                            <span class="badge badge-c">~490 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BREWERY / TAVERN -->
+            <div class="ff-card fade">
+                <div class="ff-chain">Brewery &amp; Tavern</div>
+                <div class="ff-move">
+                    <div class="ff-move-label">The Move</div>
+                    Every pub menu has a grilled protein somewhere — find it and build around it. Order it with a house salad instead of fries. For drinks, go spirits with zero-sugar mixers or a light lager. The IPAs that are 250+ cal a pint add up fast. You're out to have a good time, not undo a week.
+                </div>
+                <div class="ff-items">
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Burger — No Bun + Side Salad</div>
+                            <div class="ff-item-desc">Lettuce wrap if they offer it, otherwise eat it with a fork. House salad with balsamic on the side instead of fries. Easy swap, nobody at the table cares.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~35g</span>
+                            <span class="badge badge-c">~480 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Blackened Chicken or Salmon</div>
+                            <div class="ff-item-desc">Best-case scenario on most pub menus. Ask for grilled or blackened, not fried. Swapping fries for a salad almost never costs extra — just ask.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~38g</span>
+                            <span class="badge badge-c">~420 cal</span>
+                        </div>
+                    </div>
+                    <div class="ff-item">
+                        <div class="ff-item-info">
+                            <div class="ff-item-name">Wings — 10–12pc (Naked or Buffalo)</div>
+                            <div class="ff-item-desc">Skip breaded. Naked or traditional buffalo only — the sweet glazes add 150+ cal with no payoff. Shareable, high-protein, easy to manage.</div>
+                        </div>
+                        <div class="ff-item-macros">
+                            <span class="badge badge-p">~40g</span>
+                            <span class="badge badge-c">~480 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
     <div class="footer-logo">PROVISION</div>
@@ -733,6 +1125,7 @@
         <li><a href="#dinner">Dinner</a></li>
         <li><a href="#snacks">Snacks</a></li>
         <li><a href="#drinks">Drinks</a></li>
+        <li><a href="#fastfood">Fast Food</a></li>
     </ul>
     <div class="footer-copy">© 2024 Provision Kitchen &amp; Bar &nbsp;·&nbsp; All macros are estimates.</div>
 </footer>
