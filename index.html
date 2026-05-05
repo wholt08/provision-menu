@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVISION — Kitchen & Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #0f0e0c;
+            --surface: #1a1815;
+            --card: #1e1c18;
+            --card-hover: #262420;
+            --gold: #c8a96e;
+            --gold-light: #d4b97e;
+            --cream: #f0e8d8;
+            --muted: #8a7e6e;
+            --border: #2e2b24;
+            --alt-bg: #131210;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--cream);
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(15,14,12,0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px; padding: 0 2rem;
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem; font-weight: 500;
+            letter-spacing: 0.18em; color: var(--gold); text-decoration: none;
+        }
+        .nav-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic; color: var(--muted); font-size: 0.9rem;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            color: var(--muted); text-decoration: none;
+            font-size: 0.72rem; letter-spacing: 0.13em; text-transform: uppercase;
+            font-weight: 500; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+        .nav-toggle {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; padding: 4px; background: none; border: none;
+        }
+        .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--gold); transition: all 0.3s; }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            text-align: center; padding: 6rem 2rem 4rem;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(200,169,110,0.07) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 20%, rgba(200,169,110,0.05) 0%, transparent 50%);
+        }
+        .hero-eyebrow {
+            font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 1.5rem; font-weight: 500;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(4rem, 11vw, 9rem);
+            font-weight: 700; letter-spacing: 0.1em; color: var(--cream);
+            line-height: 1; margin-bottom: 0.4rem;
+        }
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem; letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 2.5rem;
+        }
+        .hero-rule { width: 50px; height: 1px; background: var(--gold); margin: 0 auto 2.5rem; opacity: 0.5; }
+        .hero-desc {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+            color: var(--muted); max-width: 420px; line-height: 1.9; font-style: italic;
+        }
+        .hero-cta { margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        .btn-primary {
+            display: inline-block; padding: 0.85rem 2.5rem;
+            background: var(--gold); color: var(--bg); text-decoration: none;
+            font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+            font-weight: 600; transition: background 0.2s, transform 0.15s;
+        }
+        .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+        .btn-outline {
+            display: inline-block; padding: 0.85rem 2.5rem;
+            border: 1px solid var(--gold); color: var(--gold); text-decoration: none;
+            font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+            font-weight: 500; transition: background 0.2s;
+        }
+        .btn-outline:hover { background: rgba(200,169,110,0.1); }
+
+        /* SECTIONS */
+        section { padding: 6rem 2rem; }
+        section.alt { background: var(--alt-bg); }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-eyebrow {
+            font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 0.75rem; font-weight: 500;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400;
+            color: var(--cream); margin-bottom: 1rem;
+        }
+        .section-desc {
+            font-family: 'Cormorant Garamond', serif; font-style: italic;
+            font-size: 1.1rem; color: var(--muted); max-width: 480px; margin: 0 auto;
+        }
+
+        /* ABOUT */
+        .about-frame {
+            background: var(--surface); border: 1px solid var(--border);
+            padding: 4rem 3rem; text-align: center;
+            max-width: 780px; margin: 0 auto; position: relative;
+        }
+        .about-frame::before, .about-frame::after {
+            content: ''; position: absolute;
+            width: 36px; height: 36px; border-color: var(--gold); border-style: solid; opacity: 0.35;
+        }
+        .about-frame::before { top: 1rem; left: 1rem; border-width: 1px 0 0 1px; }
+        .about-frame::after { bottom: 1rem; right: 1rem; border-width: 0 1px 1px 0; }
+        .about-frame h2 {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            font-weight: 400; color: var(--cream); margin-bottom: 1.25rem;
+        }
+        .about-frame p {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+            color: var(--muted); line-height: 1.9; font-style: italic;
+        }
+
+        /* MENU CARDS */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 1.25rem;
+        }
+        .menu-card {
+            background: var(--card); border: 1px solid var(--border);
+            padding: 1.75rem; transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .menu-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .menu-card:hover { background: var(--card-hover); border-color: rgba(200,169,110,0.25); transform: translateY(-2px); }
+        .menu-card:hover::after { opacity: 1; }
+        .card-tag {
+            position: absolute; top: 0; right: 0;
+            background: var(--gold); color: var(--bg);
+            font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
+            font-weight: 700; padding: 0.28rem 0.65rem;
+        }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.6rem; }
+        .card-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 500; color: var(--cream); line-height: 1.3; }
+        .card-price { font-size: 1rem; color: var(--gold); font-weight: 500; white-space: nowrap; }
+        .card-desc { font-size: 0.855rem; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+        .card-ing { font-size: 0.78rem; color: rgba(138,126,110,0.65); font-style: italic; margin-bottom: 1.1rem; line-height: 1.5; }
+        .badges { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+        .badge {
+            font-size: 0.67rem; letter-spacing: 0.08em; padding: 0.22rem 0.55rem;
+            border: 1px solid; font-weight: 500; text-transform: uppercase;
+        }
+        .badge-p { border-color: rgba(200,169,110,0.4); color: var(--gold); background: rgba(200,169,110,0.07); }
+        .badge-c { border-color: rgba(138,126,110,0.3); color: var(--muted); background: rgba(138,126,110,0.05); }
+
+        /* DRINKS */
+        .drinks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+        .drinks-col h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 400;
+            color: var(--gold); padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); margin-bottom: 0;
+        }
+        .drink-cat { margin-top: 2rem; }
+        .drink-cat-title {
+            font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+            color: var(--muted); margin-bottom: 0.85rem; font-weight: 500;
+        }
+        .drink-row {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding: 0.85rem 0; border-bottom: 1px solid rgba(46,43,36,0.6); gap: 1rem;
+        }
+        .drink-name { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 400; color: var(--cream); margin-bottom: 0.2rem; }
+        .drink-desc { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+        .drink-price { color: var(--gold); font-size: 0.93rem; font-weight: 500; white-space: nowrap; padding-top: 0.1rem; }
+
+        /* SNACKS & ADD-ONS */
+        .snacks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 4rem; }
+        .addon-wrap { max-width: 640px; margin: 0 auto; text-align: center; }
+        .addon-wrap h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; color: var(--cream); margin-bottom: 0.4rem; }
+        .addon-wrap p { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--muted); margin-bottom: 2rem; }
+        .ornament { color: var(--gold); opacity: 0.4; letter-spacing: 0.4em; margin: 2rem 0; font-size: 1rem; }
+        .addon-table { width: 100%; border-collapse: collapse; }
+        .addon-table th {
+            font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--gold); padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); text-align: left;
+        }
+        .addon-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(46,43,36,0.5); font-size: 0.855rem; color: var(--cream); }
+        .addon-table th:not(:first-child), .addon-table td:not(:first-child) { text-align: right; }
+        .addon-table tr:hover td { background: rgba(200,169,110,0.04); }
+
+        /* FOOTER */
+        footer {
+            background: var(--surface); border-top: 1px solid var(--border);
+            padding: 3.5rem 2rem; text-align: center;
+        }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; letter-spacing: 0.2em; color: var(--gold); }
+        .footer-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--muted); margin: 0.4rem 0 2rem; }
+        .footer-nav { display: flex; justify-content: center; gap: 2rem; list-style: none; flex-wrap: wrap; margin-bottom: 2rem; }
+        .footer-nav a { color: var(--muted); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--gold); }
+        .footer-copy { font-size: 0.72rem; color: rgba(138,126,110,0.45); letter-spacing: 0.05em; }
+
+        /* SCROLL FADE */
+        .fade { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade.on { opacity: 1; transform: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-sub { display: none; }
+            .nav-links {
+                display: none; position: absolute; top: 64px; left: 0; right: 0;
+                background: rgba(15,14,12,0.97); flex-direction: column;
+                padding: 1.5rem 2rem; gap: 1.25rem; border-bottom: 1px solid var(--border);
+            }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: flex; }
+            .drinks-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            section { padding: 4rem 1.25rem; }
+            .about-frame { padding: 2.5rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-logo">PROVISION</a>
+        <div class="nav-sub">Kitchen &amp; Bar</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#breakfast">Breakfast</a></li>
+            <li><a href="#lunch">Lunch</a></li>
+            <li><a href="#dinner">Dinner</a></li>
+            <li><a href="#snacks">Snacks</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <div class="hero-eyebrow">Est. 2024 &nbsp;·&nbsp; Locally Sourced</div>
+    <h1 class="hero-title">PROVISION</h1>
+    <div class="hero-subtitle">Kitchen &amp; Bar</div>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">Food that works as hard as you do. Honest ingredients, real macros, no shortcuts.</p>
+    <div class="hero-cta">
+        <a href="#breakfast" class="btn-primary">View Menu</a>
+        <a href="#drinks" class="btn-outline">Drinks</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding:5rem 2rem;">
+    <div class="about-frame fade">
+        <h2>The Philosophy</h2>
+        <p>Every dish at Provision is built around real macros — protein, carbohydrates, fats — in ratios that make sense for people who care about what they put in their bodies. No gimmicks, no diet culture. Well-crafted food with honest numbers on the side.</p>
+    </div>
+</section>
+
+<!-- BREAKFAST -->
+<section id="breakfast" class="alt">
+    <div class="section-inner">
+        <div class="section-header fade">
+            <div class="section-eyebrow">Morning Service &nbsp;·&nbsp; 7am – 11am</div>
+            <h2 class="section-title">Breakfast</h2>
+            <p class="section-desc">Starting strong. Each morning plate targets 30–50g of protein to set your day.</p>
+        </div>
+        <div class="menu-grid">
+
+            <div class="menu-card fade" style="position:relative">
+                <div class="card-tag">Chef's Pick</div>
+                <div class="card-header">
+                    <div class="card-name">Greek Yogurt Power Bowl</div>
+                    <div class="card-price">$14</div>
+                </div>
+                <p class="card-desc">Our most efficient morning build. Vanilla non-fat Greek yogurt with whey protein blended seamlessly in — you won't taste the difference, but your macros will. Finished with seasonal berries and house granola.</p>
+                <p class="card-ing">305g vanilla non-fat Greek yogurt · whey protein · fresh blackberries · house granola</p>
+                <div class="badges"><span class="badge badge-p">52g Protein</span><span class="badge badge-c">485 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Cottage Scramble</div>
+                    <div class="card-price">$16</div>
+                </div>
+                <p class="card-desc">Two whole eggs and two whites, scrambled with low-fat cottage cheese whisked directly into the mix — it adds volume and protein without changing the flavor. Aged cheddar, turkey sausage, and sourdough toast.</p>
+                <p class="card-ing">2 eggs + 2 egg whites · low-fat cottage cheese · aged cheddar · turkey sausage · sourdough</p>
+                <div class="badges"><span class="badge badge-p">42g Protein</span><span class="badge badge-c">645 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Bagel &amp; Eggs</div>
+                    <div class="card-price">$13</div>
+                </div>
+                <p class="card-desc">Everything bagel with two whole eggs and two whites, your style. Served alongside cottage cheese on the side — 12 grams of protein for 90 calories. The most underrated move on the breakfast menu.</p>
+                <p class="card-ing">everything bagel · 2 eggs + 2 egg whites · low-fat cottage cheese</p>
+                <div class="badges"><span class="badge badge-p">35g Protein</span><span class="badge badge-c">490 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Breakfast Burrito</div>
+                    <div class="card-price">$13</div>
+                </div>
+                <p class="card-desc">Clean and filling. Eggs, turkey sausage, jalapeños, onion, and salsa in one large flour tortilla. The egg white blend stretches the protein without adding much fat. One tortilla keeps the carbs honest.</p>
+                <p class="card-ing">flour tortilla · 2 eggs + 2 egg whites · turkey sausage · jalapeños · onion · house salsa</p>
+                <div class="badges"><span class="badge badge-p">30g Protein</span><span class="badge badge-c">410 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Avocado Toast — Upgraded</div>
+                    <div class="card-price">$15</div>
+                </div>
+                <p class="card-desc">Layering matters here. Cottage cheese goes on the sourdough first — it melts slightly in and you'd mistake it for cream cheese. Smashed avocado on top, then a fried or poached egg. Everything bagel seasoning to finish.</p>
+                <p class="card-ing">sourdough · low-fat cottage cheese · half avocado · 2 eggs + 2 egg whites · everything seasoning</p>
+                <div class="badges"><span class="badge badge-p">30g Protein</span><span class="badge badge-c">525 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Greek Yogurt Bowl</div>
+                    <div class="card-price">$11</div>
+                </div>
+                <p class="card-desc">The lighter version. Fage 2% plain with seasonal fruit and peanut butter or granola. Simple, quick, genuinely good. Add a scoop of protein on high-output days and it becomes one of the best numbers in the building.</p>
+                <p class="card-ing">Fage 2% Greek yogurt · seasonal fruit · peanut butter or granola · whey protein add-on +$2</p>
+                <div class="badges"><span class="badge badge-p">30g Protein</span><span class="badge badge-c">350 cal</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LUNCH -->
+<section id="lunch">
+    <div class="section-inner">
+        <div class="section-header fade">
+            <div class="section-eyebrow">Midday Service &nbsp;·&nbsp; 11am – 3pm</div>
+            <h2 class="section-title">Lunch</h2>
+            <p class="section-desc">Wraps, bowls, and hand-helds. Built for the middle of the day, targeting 35–48g protein.</p>
+        </div>
+        <div class="menu-grid">
+
+            <div class="menu-card fade" style="position:relative">
+                <div class="card-tag">Signature</div>
+                <div class="card-header">
+                    <div class="card-name">Turkey &amp; Cottage Wrap</div>
+                    <div class="card-price">$16</div>
+                </div>
+                <p class="card-desc">The highest-protein lunch in rotation. The ham and turkey stack is the key — don't skip either. Pepper jack, avocado, jalapeño, lettuce, tomato, and a side of cottage cheese with blackberries. This is the one.</p>
+                <p class="card-ing">flour tortilla · deli turkey · ham · pepper jack · avocado · jalapeño · lettuce · tomato · cottage cheese side</p>
+                <div class="badges"><span class="badge badge-p">48g Protein</span><span class="badge badge-c">540 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Chicken Wrap</div>
+                    <div class="card-price">$15</div>
+                </div>
+                <p class="card-desc">Baked or rotisserie chicken with a Greek yogurt sauce — mustard, hot sauce, spices — that genuinely beats mayo. Adds protein, cuts fat, tastes better. Cottage cheese side included. Make a batch of the sauce, keep it all week.</p>
+                <p class="card-ing">flour tortilla · 4oz baked chicken · Greek yogurt sauce · low-fat cottage cheese</p>
+                <div class="badges"><span class="badge badge-p">42g Protein</span><span class="badge badge-c">435 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Turkey Wrap</div>
+                    <div class="card-price">$14</div>
+                </div>
+                <p class="card-desc">Straightforward and solid. Deli turkey, avocado, jalapeño, tomato, lettuce, and sriracha. The cottage cheese side is the whole tweak — it's already a great wrap, the side just makes the numbers real.</p>
+                <p class="card-ing">flour tortilla · 4–5oz deli turkey · avocado · jalapeño · lettuce · tomato · sriracha · cottage cheese</p>
+                <div class="badges"><span class="badge badge-p">38g Protein</span><span class="badge badge-c">450 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Chicken Lettuce Wraps</div>
+                    <div class="card-price">$14</div>
+                </div>
+                <p class="card-desc">The lowest-carb plate at lunch. Ground or shredded chicken seasoned and wrapped in butter lettuce with water chestnuts, green onion, and a soy-ginger or hoisin sauce. Lighter than it sounds, more filling than you'd expect.</p>
+                <p class="card-ing">ground or shredded chicken · butter lettuce · water chestnuts · green onion · soy-ginger or hoisin</p>
+                <div class="badges"><span class="badge badge-p">30g Protein</span><span class="badge badge-c">400 cal</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- DINNER -->
+<section id="dinner" class="alt">
+    <div class="section-inner">
+        <div class="section-header fade">
+            <div class="section-eyebrow">Evening Service &nbsp;·&nbsp; 5pm – Close</div>
+            <h2 class="section-title">Dinner</h2>
+            <p class="section-desc">Full plates for the end of the day. Targeting 40–68g protein per serving.</p>
+        </div>
+        <div class="menu-grid">
+
+            <div class="menu-card fade" style="position:relative">
+                <div class="card-tag">Staff Favorite</div>
+                <div class="card-header">
+                    <div class="card-name">Chicken Pasta</div>
+                    <div class="card-price">$19</div>
+                </div>
+                <p class="card-desc">Banza chickpea pasta brings 26g of protein before the chicken shows up. Cajun-spiced baked chicken, Calabrian chili marinara, and roasted broccoli. The spice combination has real heat. Everything fits in one oven window.</p>
+                <p class="card-ing">Banza chickpea pasta · Cajun chicken breast · Calabrian chili marinara · roasted broccoli</p>
+                <div class="badges"><span class="badge badge-p">57g Protein</span><span class="badge badge-c">580 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Turkey Taco Bowl</div>
+                    <div class="card-price">$17</div>
+                </div>
+                <p class="card-desc">Lean turkey with taco seasoning over lettuce, tomato, onion, and jalapeño. Greek yogurt is the sour cream — saves fat, adds protein, nobody notices. Half avocado, salsa, shredded cheese. Bowl format skips the tortilla calories entirely.</p>
+                <p class="card-ing">lean ground turkey · taco seasoning · lettuce · tomato · jalapeño · Greek yogurt · avocado · salsa · cheese</p>
+                <div class="badges"><span class="badge badge-p">43g Protein</span><span class="badge badge-c">480 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Chicken Tortilla Pizza</div>
+                    <div class="card-price">$16</div>
+                </div>
+                <p class="card-desc">A low-carb tortilla broiled until crispy — three to four minutes is all it takes. Marinara, low-fat mozzarella, rotisserie chicken, onion, jalapeño. The tortilla crisps, the cheese bubbles. Served with Greek yogurt ranch on the side.</p>
+                <p class="card-ing">carb-balance tortilla · marinara · low-fat mozzarella · rotisserie chicken · jalapeño · onion · GY ranch</p>
+                <div class="badges"><span class="badge badge-p">43g Protein</span><span class="badge badge-c">355 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Chicken Burrito Bowl</div>
+                    <div class="card-price">$18</div>
+                </div>
+                <p class="card-desc">Double chicken, brown or cauliflower rice, black beans, fajita veggies, salsa, and guac. Double the chicken takes you from 21g to 42g protein — it's not even a close call. Build it right and this is the best bowl in the building.</p>
+                <p class="card-ing">double chicken · brown or cauli rice · black beans · fajita veggies · salsa · guacamole</p>
+                <div class="badges"><span class="badge badge-p">42g Protein</span><span class="badge badge-c">683 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Fajitas</div>
+                    <div class="card-price">$22</div>
+                </div>
+                <p class="card-desc">Chicken or steak strips, bell peppers, caramelized onion. Flour tortillas, fresh guac, salsa, jalapeño. The highest-calorie dinner we serve — save it for active days. The protein is great, but this is a high-budget meal. Plan accordingly.</p>
+                <p class="card-ing">chicken or steak · bell peppers · onion · flour tortillas · guac · salsa · jalapeño</p>
+                <div class="badges"><span class="badge badge-p">45g Protein</span><span class="badge badge-c">850 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Chicken Tikka Masala</div>
+                    <div class="card-price">$20</div>
+                </div>
+                <p class="card-desc">Our biggest plate. Nearly 12oz of baked chicken in a rich tikka masala sauce with bell peppers, onion, and jasmine rice. Use this when you have calorie room to burn — it earns every number. Best on workout days or when you've been running low.</p>
+                <p class="card-ing">baked chicken breast · tikka masala sauce · bell peppers · onion · jasmine rice</p>
+                <div class="badges"><span class="badge badge-p">68g Protein</span><span class="badge badge-c">840 cal</span></div>
+            </div>
+
+            <div class="menu-card fade" style="position:relative">
+                <div class="card-tag">Popular</div>
+                <div class="card-header">
+                    <div class="card-name">Smash Burger Bowl</div>
+                    <div class="card-price">$17</div>
+                </div>
+                <p class="card-desc">Two smash patties cooked hard for a serious crust, two slices of melted American, lettuce, tomato, onion. House burger sauce is Greek yogurt, ketchup, mustard, relish, and garlic powder — tastes like special sauce, costs you nothing macro-wise.</p>
+                <p class="card-ing">2 smash patties · American cheese · lettuce · tomato · onion · house burger sauce</p>
+                <div class="badges"><span class="badge badge-p">39g Protein</span><span class="badge badge-c">550 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Flying Dutchman</div>
+                    <div class="card-price">$16</div>
+                </div>
+                <p class="card-desc">Two smash patties, two slices of American, no bun. Greek yogurt special sauce with ketchup, mustard, and pickles. Air-fried fries on the side. Feels like a cheat meal, isn't really. Bunless keeps carbs low; the sauce keeps protein honest.</p>
+                <p class="card-ing">2 smash patties · American cheese · GY special sauce · pickles · air-fried fries</p>
+                <div class="badges"><span class="badge badge-p">42g Protein</span><span class="badge badge-c">610 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Chicken Tacos</div>
+                    <div class="card-price">$16</div>
+                </div>
+                <p class="card-desc">Three corn or flour tortillas with seasoned grilled chicken, cabbage slaw, salsa, jalapeño, lime, and cotija. Solid baseline — add black beans or a cottage cheese side to break into 40g+ territory without touching the tacos themselves.</p>
+                <p class="card-ing">3 tortillas · grilled chicken · cabbage slaw · salsa · jalapeño · lime · cotija</p>
+                <div class="badges"><span class="badge badge-p">30g Protein</span><span class="badge badge-c">400 cal</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SNACKS -->
+<section id="snacks">
+    <div class="section-inner">
+        <div class="section-header fade">
+            <div class="section-eyebrow">All Day</div>
+            <h2 class="section-title">Snacks &amp; Sides</h2>
+            <p class="section-desc">Gap fillers. The swing variables that close the gap on hard days.</p>
+        </div>
+        <div class="snacks-grid">
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Nutritional Yeast Popcorn</div>
+                    <div class="card-price">$6</div>
+                </div>
+                <p class="card-desc">Three cups of air-popped corn tossed warm with nutritional yeast, garlic powder, smoked paprika, and salt. The nooch brings a savory, cheesy quality — and real protein behind it. Surprisingly legit.</p>
+                <p class="card-ing">air-popped popcorn · nutritional yeast · garlic powder · smoked paprika · salt</p>
+                <div class="badges"><span class="badge badge-p">11g Protein</span><span class="badge badge-c">135 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Savory Cottage Bowl</div>
+                    <div class="card-price">$7</div>
+                </div>
+                <p class="card-desc">One cup of cottage cheese with cracked black pepper and sliced cucumber or seasonal berries. Simple, high-protein, ready in under two minutes. The most efficient snack on the board.</p>
+                <p class="card-ing">low-fat cottage cheese · black pepper · cucumber or seasonal fruit</p>
+                <div class="badges"><span class="badge badge-p">25g Protein</span><span class="badge badge-c">180 cal</span></div>
+            </div>
+
+            <div class="menu-card fade">
+                <div class="card-header">
+                    <div class="card-name">Emergency Shake</div>
+                    <div class="card-price">$9</div>
+                </div>
+                <p class="card-desc">One scoop whey with 8oz soy milk. When you're 30g short with two hours until bed, this is the move. Chocolate or vanilla, both work. No frills. Shake it hard.</p>
+                <p class="card-ing">Kirkland whey protein · soy milk · chocolate or vanilla</p>
+                <div class="badges"><span class="badge badge-p">31g Protein</span><span class="badge badge-c">220 cal</span></div>
+            </div>
+
+        </div>
+
+        <div class="addon-wrap fade">
+            <div class="ornament">— ✦ —</div>
+            <h3>Daily Add-Ons</h3>
+            <p>Not meals — just things to bolt onto anything. The table that makes the numbers work.</p>
+            <table class="addon-table">
+                <thead>
+                    <tr><th>Item</th><th>Protein</th><th>Calories</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>½ cup low-fat cottage cheese</td><td>12g</td><td>90</td></tr>
+                    <tr><td>1 cup Fage 2% Greek yogurt</td><td>17g</td><td>130</td></tr>
+                    <tr><td>1 scoop Kirkland whey + soy milk</td><td>33g</td><td>230</td></tr>
+                    <tr><td>2 egg whites</td><td>7g</td><td>34</td></tr>
+                    <tr><td>½ cup black beans</td><td>8g</td><td>110</td></tr>
+                    <tr><td>4oz rotisserie chicken</td><td>28g</td><td>185</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- DRINKS -->
+<section id="drinks" class="alt">
+    <div class="section-inner">
+        <div class="section-header fade">
+            <div class="section-eyebrow">Bar &amp; Beverages</div>
+            <h2 class="section-title">Drinks</h2>
+            <p class="section-desc">Zero-sugar sodas, craft protein shakes, and cocktails built around clean mixers.</p>
+        </div>
+
+        <div class="drinks-grid fade">
+
+            <!-- NON-ALCOHOLIC -->
+            <div class="drinks-col">
+                <h3>Non-Alcoholic</h3>
+
+                <div class="drink-cat">
+                    <div class="drink-cat-title">Still &amp; Sparkling</div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Still Water</div><div class="drink-desc">Filtered, always cold</div></div>
+                        <div class="drink-price">$3</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Sparkling Water</div><div class="drink-desc">Carbonated, served on ice</div></div>
+                        <div class="drink-price">$3</div>
+                    </div>
+                </div>
+
+                <div class="drink-cat">
+                    <div class="drink-cat-title">Zero Cal · Zero Sugar Sodas</div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Orange Zero</div><div class="drink-desc">Bright and citrusy, no sugar</div></div>
+                        <div class="drink-price">$4</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Root Beer Zero</div><div class="drink-desc">Classic and smooth, no sugar</div></div>
+                        <div class="drink-price">$4</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Grapefruit Citrus Zero</div><div class="drink-desc">Tart, effervescent, refreshing</div></div>
+                        <div class="drink-price">$4</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Ginger Ale Zero</div><div class="drink-desc">Ginger bite, no sugar</div></div>
+                        <div class="drink-price">$4</div>
+                    </div>
+                </div>
+
+                <div class="drink-cat">
+                    <div class="drink-cat-title">Coffee</div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Drip Coffee</div><div class="drink-desc">House blend, freshly brewed</div></div>
+                        <div class="drink-price">$4</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Espresso</div><div class="drink-desc">Double shot, served straight</div></div>
+                        <div class="drink-price">$4</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Americano</div><div class="drink-desc">Double espresso pulled long, served black</div></div>
+                        <div class="drink-price">$5</div>
+                    </div>
+                </div>
+
+                <div class="drink-cat">
+                    <div class="drink-cat-title">Protein Shakes</div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Chocolate Protein Shake</div><div class="drink-desc">Whey · soy milk · 31g protein · 220 cal</div></div>
+                        <div class="drink-price">$9</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Vanilla Protein Shake</div><div class="drink-desc">Whey · soy milk · 31g protein · 220 cal</div></div>
+                        <div class="drink-price">$9</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COCKTAILS -->
+            <div class="drinks-col">
+                <h3>Craft Cocktails</h3>
+
+                <div class="drink-cat">
+                    <div class="drink-cat-title">Rum</div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">The Provision Mule</div><div class="drink-desc">Dark rum · ginger ale zero · fresh lime · candied ginger</div></div>
+                        <div class="drink-price">$12</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Citrus Rum Fizz</div><div class="drink-desc">White rum · orange zero · fresh lime · citrus sugar rim</div></div>
+                        <div class="drink-price">$12</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Root &amp; Rum</div><div class="drink-desc">Spiced rum · root beer zero · vanilla bitters · served tall</div></div>
+                        <div class="drink-price">$12</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Grapefruit Rum Spritz</div><div class="drink-desc">White rum · grapefruit citrus zero · lime · salted rim</div></div>
+                        <div class="drink-price">$12</div>
+                    </div>
+                </div>
+
+                <div class="drink-cat">
+                    <div class="drink-cat-title">Bourbon</div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Grapefruit Smash</div><div class="drink-desc">Bourbon · grapefruit citrus zero · fresh mint · honey float</div></div>
+                        <div class="drink-price">$13</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Bourbon Storm</div><div class="drink-desc">Bourbon · ginger ale zero · brown sugar · Angostura bitters</div></div>
+                        <div class="drink-price">$13</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">Root &amp; Bourbon</div><div class="drink-desc">Bourbon · root beer zero · orange bitters · on the rocks</div></div>
+                        <div class="drink-price">$13</div>
+                    </div>
+                    <div class="drink-row">
+                        <div><div class="drink-name">The Gainz&nbsp;&nbsp;<span style="font-size:0.65rem;letter-spacing:0.12em;color:var(--gold);font-family:Inter,sans-serif;font-style:normal;font-weight:600;text-transform:uppercase;">House</span></div><div class="drink-desc">Bourbon · orange zero · ginger ale zero · expressed orange peel</div></div>
+                        <div class="drink-price">$14</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">PROVISION</div>
+    <div class="footer-sub">Kitchen &amp; Bar &nbsp;—&nbsp; Food that works as hard as you do.</div>
+    <ul class="footer-nav">
+        <li><a href="#breakfast">Breakfast</a></li>
+        <li><a href="#lunch">Lunch</a></li>
+        <li><a href="#dinner">Dinner</a></li>
+        <li><a href="#snacks">Snacks</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+    </ul>
+    <div class="footer-copy">© 2024 Provision Kitchen &amp; Bar &nbsp;·&nbsp; All macros are estimates.</div>
+</footer>
+
+<script>
+    // Mobile nav
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    const secObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                navAs.forEach(a => a.classList.remove('active'));
+                const hit = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+                if (hit) hit.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    sections.forEach(s => secObs.observe(s));
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade');
+    const fadeObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('on'); fadeObs.unobserve(e.target); }
+        });
+    }, { rootMargin: '0px 0px -60px 0px' });
+    fadeEls.forEach(el => fadeObs.observe(el));
+</script>
+</body>
+</html>
