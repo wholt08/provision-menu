@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="3" fill="#0f0e0c"/>
+  <!-- Thin gold border -->
+  <rect x="1.5" y="1.5" width="29" height="29" rx="2.5" fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.55"/>
+  <!-- Corner accent marks -->
+  <path d="M4 4 L4 7 M4 4 L7 4" stroke="#c8a96e" stroke-width="0.9" stroke-linecap="square" opacity="0.5" fill="none"/>
+  <path d="M28 4 L28 7 M28 4 L25 4" stroke="#c8a96e" stroke-width="0.9" stroke-linecap="square" opacity="0.5" fill="none"/>
+  <path d="M4 28 L4 25 M4 28 L7 28" stroke="#c8a96e" stroke-width="0.9" stroke-linecap="square" opacity="0.5" fill="none"/>
+  <path d="M28 28 L28 25 M28 28 L25 28" stroke="#c8a96e" stroke-width="0.9" stroke-linecap="square" opacity="0.5" fill="none"/>
+  <!-- Serif P letterform -->
+  <text x="16" y="23.5"
+        font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif"
+        font-size="21"
+        font-weight="bold"
+        fill="#c8a96e"
+        text-anchor="middle"
+        letter-spacing="-0.5">P</text>
+</svg>

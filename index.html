@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROVISION — Culinary Engine & Kitchen Notebook</title>
+  <meta name="description" content="Personal culinary catalog of 300+ dialed-in high-protein recipes, kitchen ratios, and fast food hacks.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand" onclick="window.location.reload(); return false;">
+        <span class="brand-title">Provision</span>
+        <span class="brand-subtitle">Kitchen &amp; Culinary Engine</span>
+      </a>
+
+      <!-- Desktop Tabs -->
+      <ul class="nav-tabs" id="mobileNavList">
+        <li>
+          <button class="nav-tab-btn active" data-tab="recipes">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+            Recipes &amp; Inspo
+            <span class="nav-count-badge" id="recipesTabCount">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab-btn" data-tab="notebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            Kitchen Notebook
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab-btn" data-tab="fastfood">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            Fast Food Hacks
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab-btn" data-tab="favorites">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            Favorites
+            <span class="nav-count-badge" id="favsTabCount">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="roulette-btn" id="rouletteNavBtn" title="Pick a random high-protein recipe">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+            <circle cx="8" cy="8" r="1.5" fill="currentColor"></circle>
+            <circle cx="16" cy="16" r="1.5" fill="currentColor"></circle>
+            <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+          </svg>
+          Surprise Me
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Personal Culinary System</span>
+      <h1 class="hero-title">What are we cooking?</h1>
+      <p class="hero-desc">Dialed-in high-protein recipes, tested kitchen ratios, and healthified comfort food that actually tastes good.</p>
+      
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <strong>307</strong> Total Recipes
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat-item">
+          <strong>95+</strong> High-Protein Focus
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat-item">
+          <strong>8</strong> Fast Food Plays
+        </div>
+        <div class="hero-divider"></div>
+        <button class="btn-secondary" id="heroRouletteBtn" style="padding: 0.4rem 0.95rem; font-size: 0.72rem;">
+          🎲 Spin Recipe Roulette
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Areas -->
+  <main>
+
+    <!-- VIEW 1: RECIPES & INSPO -->
+    <section class="view-section active" id="recipesView">
+      
+      <!-- Search & Filters Control Card -->
+      <div class="controls-card">
+        
+        <!-- Search Row -->
+        <div class="search-row">
+          <div class="search-box-wrapper">
+            <span class="search-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input 
+              type="text" 
+              class="search-input" 
+              id="searchInput" 
+              placeholder="Search dishes, ingredients (e.g. cottage cheese, pasta, air fryer), or creators..."
+              autocomplete="off"
+            >
+            <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">✕</button>
+          </div>
+
+          <!-- Sort Selector -->
+          <div class="sort-select-wrapper">
+            <span class="sort-label">Sort:</span>
+            <select class="sort-select" id="sortSelect">
+              <option value="default">Featured / Originals First</option>
+              <option value="protein">Highest Protein</option>
+              <option value="calories">Lowest Calories</option>
+              <option value="alpha">Alphabetical (A–Z)</option>
+              <option value="random">Shuffle / Random</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Meal Category Pills -->
+        <div class="category-tabs">
+          <button class="cat-pill active" data-category="all">All Dishes</button>
+          <button class="cat-pill" data-category="breakfast">Breakfast</button>
+          <button class="cat-pill" data-category="dinner">Lunch &amp; Dinner</button>
+          <button class="cat-pill" data-category="snack">Snacks &amp; Sides</button>
+          <button class="cat-pill" data-category="sweet">Desserts &amp; Sweets</button>
+          <button class="cat-pill" data-category="drink">Drinks</button>
+        </div>
+
+        <!-- Tag Quick Filters -->
+        <div class="tags-row">
+          <span class="tags-label">Filter:</span>
+          <div class="tags-row" id="tagPillsContainer">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Results Meta Bar -->
+      <div class="results-meta-bar">
+        <span class="results-count" id="resultsCount">Showing recipes...</span>
+        <button class="reset-filters-btn" id="resetFiltersBtn">Reset Filters ✕</button>
+      </div>
+
+      <!-- Recipes Grid -->
+      <div class="recipes-grid" id="recipesGrid">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: KITCHEN NOTEBOOK (RATIOS & STAPLES) -->
+    <section class="view-section" id="notebookView">
+      <div class="notebook-header">
+        <span class="hero-eyebrow">Kitchen Notebook</span>
+        <h2 class="hero-title" style="font-size: 2.4rem;">Dialed-In Ratios &amp; Methods</h2>
+        <p class="hero-desc">The stuff you always forget. Exact ratios, grind levels, and staple recipes tested to perfection so you don't have to re-dial them every time.</p>
+      </div>
+
+      <!-- Interactive Coffee Pour-Over Calculator -->
+      <div class="coffee-calculator">
+        <h3 class="calc-title">☕ Pour-Over Coffee Ratio Calculator</h3>
+        <p class="calc-subtitle">Dialed in at 1:16 ratio · Level 7 on the Opus grinder</p>
+        
+        <div class="calc-inputs-row">
+          <div class="calc-field">
+            <label for="coffeeCupsInput">Cups of Water</label>
+            <input type="number" id="coffeeCupsInput" class="calc-input" value="3" min="1" max="10" step="0.5">
+          </div>
+          <div style="color: var(--muted); font-size: 1.2rem; margin-top: 1.2rem;">or</div>
+          <div class="calc-field">
+            <label for="coffeeWaterInput">Water Weight (Grams)</label>
+            <input type="number" id="coffeeWaterInput" class="calc-input" value="720" min="100" max="2500" step="10">
+          </div>
+        </div>
+
+        <div class="calc-output-box">
+          <div>
+            <div class="calc-stat-val" id="coffeeBeansGrams">45g</div>
+            <div class="calc-stat-lbl">Opus Ground Beans</div>
+          </div>
+          <div style="border-left: 1px solid var(--border); height: 40px;"></div>
+          <div>
+            <div class="calc-stat-val" id="coffeeBeansTbsp">~8 Tbsp</div>
+            <div class="calc-stat-lbl">Approx. Tablespoons</div>
+          </div>
+          <div style="border-left: 1px solid var(--border); height: 40px;"></div>
+          <div>
+            <div class="calc-stat-val" style="color: var(--cream);">Level 7</div>
+            <div class="calc-stat-lbl">Opus Grinder Setting</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notebook Grid -->
+      <div class="notebook-grid" id="notebookGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: FAST FOOD HACKS -->
+    <section class="view-section" id="fastfoodView">
+      <div class="ff-section-header">
+        <span class="hero-eyebrow">Eating Out Smart</span>
+        <h2 class="hero-title" style="font-size: 2.4rem;">Fast Food Macro Hacks</h2>
+        <p class="hero-desc">When you’re travelling, busy, or just grabbing food on the go. Exactly what to order to get 40g+ protein without accidental calorie bombs.</p>
+      </div>
+
+      <div class="ff-grid" id="fastfoodGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- VIEW 4: FAVORITES -->
+    <section class="view-section" id="favoritesView">
+      <div class="notebook-header">
+        <span class="hero-eyebrow">Saved For This Week</span>
+        <h2 class="hero-title" style="font-size: 2.4rem;">Your Recipe Shortlist</h2>
+        <p class="hero-desc">Your hand-picked rotation for quick reference while grocery shopping and cooking.</p>
+      </div>
+
+      <div class="recipes-grid" id="favoritesGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COOK VIEW MODAL (Interactive Drawer) -->
+  <div class="modal-backdrop" id="cookModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-sheet">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-meta-top">
+          <span class="modal-author-badge" id="modalAuthorBadge">Curated Recipe</span>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+        </div>
+        <h2 class="modal-title" id="modalTitle">Recipe Title</h2>
+        <div class="modal-macros-row" id="modalMacrosRow">
+          <!-- Dynamically populated macros -->
+        </div>
+      </div>
+
+      <!-- Action Tools Bar -->
+      <div class="modal-action-bar">
+        <div class="modal-tools-group">
+          <!-- Scaler -->
+          <div class="scaler-btn-group">
+            <span class="scaler-label">Scale:</span>
+            <button class="scaler-btn active" data-scale="1">1x</button>
+            <button class="scaler-btn" data-scale="2">2x</button>
+            <button class="scaler-btn" data-scale="3">3x</button>
+          </div>
+
+          <!-- Wake Lock Toggle -->
+          <button class="tool-toggle-btn" id="modalWakeBtn" title="Keep screen awake while cooking">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            Stay Awake
+          </button>
+
+          <!-- Favorite Toggle -->
+          <button class="tool-toggle-btn" id="modalFavBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            Save
+          </button>
+        </div>
+
+        <!-- Reel Link -->
+        <a href="#" target="_blank" rel="noopener" class="reel-link-btn" id="modalReelBtn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Watch Reel ↗
+        </a>
+      </div>
+
+      <!-- Modal Body (Two Columns) -->
+      <div class="modal-body">
+        
+        <!-- Ingredients Column -->
+        <div class="ingredients-column">
+          <h3 class="modal-section-title">
+            Ingredients
+            <button class="copy-ingredients-btn" id="copyIngredientsBtn">Copy List</button>
+          </h3>
+          <ul class="ingredients-checklist" id="ingredientsChecklist">
+            <!-- Dynamically populated items -->
+          </ul>
+        </div>
+
+        <!-- Instructions Column -->
+        <div class="instructions-column">
+          <h3 class="modal-section-title">
+            Method &amp; Steps
+          </h3>
+          <ol class="instructions-list" id="instructionsList">
+            <!-- Dynamically populated steps -->
+          </ol>
+        </div>
+
+        <!-- Notes & Personal Tweaks Footer -->
+        <div class="modal-notes-section">
+          <!-- Chef Notes -->
+          <div class="chef-notes-box" id="chefNotesBox">
+            <div class="chef-notes-label">Creator / Macro Notes</div>
+            <p id="chefNotesText"></p>
+          </div>
+
+          <!-- User Personal Tweaks (Persisted in LocalStorage) -->
+          <div class="user-tweaks-box">
+            <div class="user-tweaks-header">
+              <span class="user-tweaks-label">My Notes &amp; Tweaks (Saved)</span>
+              <span class="user-tweaks-status" id="userTweaksStatus">Saved ✓</span>
+            </div>
+            <textarea 
+              class="user-tweaks-textarea" 
+              id="userTweaksTextarea" 
+              placeholder="Jot down your modifications (e.g. 'air fry at 380° for 11m instead', 'added hot honey'). Saved automatically in your browser."
+            ></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ROULETTE MODAL (Inspiration Engine) -->
+  <div class="modal-backdrop" id="rouletteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-sheet roulette-sheet" style="position: relative;">
+      <button class="modal-close-btn" id="rouletteCloseBtn" style="position: absolute; top: 1rem; right: 1rem;" aria-label="Close roulette">✕</button>
+      <div class="roulette-icon">🎲</div>
+      <div class="roulette-eyebrow">Dinner Decision Engine</div>
+      <h2 class="roulette-dish-title" id="rouletteDishTitle">Spinning...</h2>
+      <div class="roulette-macros" id="rouletteMacros"></div>
+      <p class="roulette-snippet" id="rouletteSnippet"></p>
+
+      <div class="roulette-actions">
+        <button class="btn-secondary" id="rouletteRerollBtn">
+          🔄 Spin Again
+        </button>
+        <button class="btn-gold" id="rouletteCookBtn">
+          Cook This Recipe →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer>
+    <div class="footer-logo">Provision</div>
+    <p class="footer-sub">A curated kitchen catalog &amp; high-protein culinary engine.</p>
+    <div class="footer-links">
+      <button onclick="document.querySelector('[data-tab=\'recipes\']').click();">All Recipes</button>
+      <button onclick="document.querySelector('[data-tab=\'notebook\']').click();">Kitchen Notebook</button>
+      <button onclick="document.querySelector('[data-tab=\'fastfood\']').click();">Fast Food Hacks</button>
+      <button onclick="document.getElementById('rouletteNavBtn').click();">Dinner Roulette</button>
+    </div>
+    <p class="footer-copy">PROVISION Kitchen &bull; Dialed in &amp; Tested</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
