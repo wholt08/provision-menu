@@ -14,7 +14,14 @@ from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_JS_PATH = os.path.join(BASE_DIR, 'data.js')
-DEFAULT_CSV_PATH = '/home/billy/Documents/Obsidian/Assets/journal_meals.csv'
+
+CSV_LOCATIONS = [
+    '/DATA/Documents/Obsidian/Assets/journal_meals.csv',
+    '/home/billy/Documents/Obsidian/Assets/journal_meals.csv',
+    os.path.expanduser('~/Documents/Obsidian/Assets/journal_meals.csv')
+]
+
+DEFAULT_CSV_PATH = next((p for p in CSV_LOCATIONS if os.path.exists(p)), CSV_LOCATIONS[0])
 
 ALIASES = {
     'tortilla pizza': 'Chicken Tortilla Pizza',

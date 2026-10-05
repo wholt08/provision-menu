@@ -7,7 +7,8 @@
 set -euo pipefail
 
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
-PROJECT_DIR="/home/billy/Projects/Provisions Menu"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Starting Provision Food Log Sync ==="
 
