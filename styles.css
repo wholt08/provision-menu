@@ -1572,10 +1572,207 @@ footer {
   color: var(--gold);
 }
 
-.footer-copy {
+/* ==========================================================================
+   SOURCE SEGMENTED CONTROL & PHOTO VISUALS & FOOD LOG BADGES
+   ========================================================================== */
+.source-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.source-segmented-control {
+  display: inline-flex;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 3px;
+}
+
+.source-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.source-btn:hover {
+  color: var(--cream);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.source-btn.active {
+  background: var(--gold);
+  color: #0c0b09;
+  font-weight: 600;
+}
+
+/* Card Visual View Mode Toggle */
+.view-mode-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.view-mode-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
   font-size: 0.72rem;
-  color: rgba(140, 130, 115, 0.5);
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition);
+}
+
+.view-mode-btn:hover {
+  color: var(--cream);
+}
+
+.view-mode-btn.active {
+  background: var(--card-hover);
+  color: var(--gold);
+}
+
+/* Recipe Card Photo View */
+.recipe-card.with-photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-photo-header {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #11100e;
+}
+
+.card-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.recipe-card:hover .card-photo-img {
+  transform: scale(1.06);
+}
+
+.card-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 11, 9, 0.4) 0%, rgba(12, 11, 9, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-photo-body {
+  padding: 1.25rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Food Log Cook Frequency Badges */
+.card-cook-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-cooked {
+  background: rgba(104, 182, 132, 0.12);
+  border: 1px solid rgba(104, 182, 132, 0.35);
+  color: #8edaa8;
+}
+
+.badge-high-rotation {
+  background: rgba(201, 168, 106, 0.16);
+  border: 1px solid rgba(201, 168, 106, 0.45);
+  color: var(--gold-light);
+  box-shadow: 0 0 12px rgba(201, 168, 106, 0.18);
+}
+
+.badge-never {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+}
+
+/* Modal History Banner */
+.modal-history-banner {
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.15rem;
+  font-size: 0.84rem;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+.modal-history-banner strong {
+  color: var(--gold);
+}
+
+/* Instagram Reel Embed inside Modal */
+.reel-embed-wrapper {
+  grid-column: 1 / -1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reel-embed-wrapper.open {
+  display: flex;
+}
+
+.reel-embed-frame {
+  width: 100%;
+  max-width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #000;
 }
 
 /* ==========================================================================

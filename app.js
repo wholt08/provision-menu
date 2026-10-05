@@ -14,13 +14,16 @@
     activeTab: 'recipes',
     searchQuery: '',
     categoryFilter: 'all',
+    sourceFilter: 'all', // 'all' | 'instagram' | 'provision'
+    viewMode: localStorage.getItem('provision_view_mode') || 'photo', // 'photo' | 'compact'
     selectedTags: new Set(),
     sortBy: 'default',
     favorites: new Set(),
     userNotes: {},
     activeRecipe: null,
     servingMultiplier: 1,
-    wakeLockSentinel: null
+    wakeLockSentinel: null,
+    isEmbedOpen: false
   };
 
   // --- DOM Elements ---
@@ -33,6 +36,14 @@
     favsTabCount: document.getElementById('favsTabCount'),
     rouletteNavBtn: document.getElementById('rouletteNavBtn'),
     heroRouletteBtn: document.getElementById('heroRouletteBtn'),
+
+    // Source segmented control & view mode
+    sourceBtns: document.querySelectorAll('.source-btn'),
+    sourceCountAll: document.getElementById('sourceCountAll'),
+    sourceCountIg: document.getElementById('sourceCountIg'),
+    sourceCountProv: document.getElementById('sourceCountProv'),
+    viewModePhotoBtn: document.getElementById('viewModePhotoBtn'),
+    viewModeCompactBtn: document.getElementById('viewModeCompactBtn'),
 
     // Views
     views: {
@@ -63,7 +74,11 @@
     modalAuthorBadge: document.getElementById('modalAuthorBadge'),
     modalTitle: document.getElementById('modalTitle'),
     modalMacrosRow: document.getElementById('modalMacrosRow'),
+    modalHistoryBanner: document.getElementById('modalHistoryBanner'),
     modalReelBtn: document.getElementById('modalReelBtn'),
+    modalEmbedToggleBtn: document.getElementById('modalEmbedToggleBtn'),
+    reelEmbedWrapper: document.getElementById('reelEmbedWrapper'),
+    reelEmbedIframe: document.getElementById('reelEmbedIframe'),
     modalFavBtn: document.getElementById('modalFavBtn'),
     modalWakeBtn: document.getElementById('modalWakeBtn'),
     scalerBtns: document.querySelectorAll('.scaler-btn'),
@@ -109,7 +124,15 @@
       state.notebook = window.PROVISION_DATA.notebook || [];
       state.fastfood = window.PROVISION_DATA.fastfood || [];
     }
-    if (el.recipesTabCount) el.recipesTabCount.textContent = state.recipes.length;
+
+    const totalCount = state.recipes.length;
+    const igCount = state.recipes.filter(r => !r.isProvisionOriginal).length;
+    const provCount = state.recipes.filter(r => r.isProvisionOriginal).length;
+
+    if (el.recipesTabCount) el.recipesTabCount.textContent = totalCount;
+    if (el.sourceCountAll) el.sourceCountAll.textContent = totalCount;
+    if (el.sourceCountIg) el.sourceCountIg.textContent = igCount;
+    if (el.sourceCountProv) el.sourceCountProv.textContent = provCount;
   }
 
   function loadStoredUserData() {
@@ -126,6 +149,7 @@
       console.warn('LocalStorage error:', e);
     }
     updateFavoritesBadge();
+    updateViewModeButtons();
   }
 
   function updateFavoritesBadge() {
@@ -191,6 +215,34 @@
 
   // --- Search & Filters ---
   function setupFilters() {
+    // Source filter buttons (All vs Instagram vs Provision)
+    el.sourceBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        el.sourceBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.sourceFilter = btn.dataset.source;
+        renderRecipesView();
+      });
+    });
+
+    // View mode buttons (Photo vs Compact)
+    if (el.viewModePhotoBtn && el.viewModeCompactBtn) {
+      el.viewModePhotoBtn.addEventListener('click', () => {
+        state.viewMode = 'photo';
+        localStorage.setItem('provision_view_mode', 'photo');
+        updateViewModeButtons();
+        renderRecipesView();
+        if (state.activeTab === 'favorites') renderFavoritesView();
+      });
+      el.viewModeCompactBtn.addEventListener('click', () => {
+        state.viewMode = 'compact';
+        localStorage.setItem('provision_view_mode', 'compact');
+        updateViewModeButtons();
+        renderRecipesView();
+        if (state.activeTab === 'favorites') renderFavoritesView();
+      });
+    }
+
     // Search input
     let debounceTimer;
     el.searchInput.addEventListener('input', (e) => {
@@ -233,16 +285,23 @@
     renderTagFilters();
   }
 
+  function updateViewModeButtons() {
+    if (!el.viewModePhotoBtn || !el.viewModeCompactBtn) return;
+    el.viewModePhotoBtn.classList.toggle('active', state.viewMode === 'photo');
+    el.viewModeCompactBtn.classList.toggle('active', state.viewMode === 'compact');
+  }
+
   function renderTagFilters() {
     const popularTags = [
       'High Protein',
+      'High Rotation (5+)',
+      'Never Made Yet',
       'Quick (<20m)',
       'Cottage Cheese',
       'Chicken',
       'Air Fryer',
       'Healthified Comfort',
       'Meal Prep',
-      'One Pan / Low Cleanup',
       'Beef',
       'Low Carb',
       'Provision Original'
@@ -270,12 +329,14 @@
   function resetAllFilters() {
     state.searchQuery = '';
     state.categoryFilter = 'all';
+    state.sourceFilter = 'all';
     state.selectedTags.clear();
     state.sortBy = 'default';
 
     el.searchInput.value = '';
     el.searchClearBtn.style.display = 'none';
     el.sortSelect.value = 'default';
+    el.sourceBtns.forEach(b => b.classList.toggle('active', b.dataset.source === 'all'));
     el.categoryPills.forEach(p => p.classList.toggle('active', p.dataset.category === 'all'));
     document.querySelectorAll('.tag-filter-btn').forEach(btn => btn.classList.remove('active'));
 
@@ -285,6 +346,10 @@
   // --- Filtering & Sorting Core Logic ---
   function getFilteredRecipes(recipesSource) {
     return recipesSource.filter(recipe => {
+      // Source filter (Instagram vs Provision Classic)
+      if (state.sourceFilter === 'instagram' && recipe.isProvisionOriginal) return false;
+      if (state.sourceFilter === 'provision' && !recipe.isProvisionOriginal) return false;
+
       // Category filter
       if (state.categoryFilter !== 'all') {
         if (state.categoryFilter === 'dinner' && (recipe.category === 'dinner' || recipe.category === 'lunch')) {
@@ -320,6 +385,20 @@
   function sortRecipesList(list) {
     const sorted = [...list];
     switch (state.sortBy) {
+      case 'mostCooked':
+        return sorted.sort((a, b) => (b.timesCooked || 0) - (a.timesCooked || 0));
+      case 'recentlyCooked':
+        return sorted.sort((a, b) => {
+          const dateA = a.lastCookedDate || '';
+          const dateB = b.lastCookedDate || '';
+          return dateB.localeCompare(dateA);
+        });
+      case 'neverCooked':
+        return sorted.sort((a, b) => {
+          const countA = a.timesCooked || 0;
+          const countB = b.timesCooked || 0;
+          return countA - countB;
+        });
       case 'protein':
         return sorted.sort((a, b) => (b.macros?.protein || 0) - (a.macros?.protein || 0));
       case 'calories':
@@ -342,6 +421,54 @@
     }
   }
 
+  // --- Aesthetic Food Photography Mapper ---
+  function getRecipeImage(recipe) {
+    if (recipe.imageUrl) return recipe.imageUrl;
+
+    const t = (recipe.title + ' ' + (recipe.tags || []).join(' ')).toLowerCase();
+
+    if (t.includes('pizza') || t.includes('flatbread')) {
+      return 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('burger') || t.includes('flying dutchman') || t.includes('patty melt') || t.includes('sliders')) {
+      return 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('taco') || t.includes('taquitos') || t.includes('fajita') || t.includes('enchilada')) {
+      return 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('wrap') || t.includes('burrito') || t.includes('shawarma') || t.includes('gyro')) {
+      return 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('bowl') || t.includes('rice') || t.includes('tuna') || t.includes('teriyaki')) {
+      return 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('pasta') || t.includes('noodle') || t.includes('alfredo') || t.includes('carbonara') || t.includes('mac and cheese') || t.includes('ramen')) {
+      return 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('egg') || t.includes('scramble') || t.includes('toast') || t.includes('bagel') || t.includes('breakfast')) {
+      return 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('cheesecake') || t.includes('cookie') || t.includes('brownie') || t.includes('muffin') || t.includes('lava cake') || t.includes('donut') || t.includes('sweet')) {
+      return 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('oat') || t.includes('yogurt') || t.includes('smoothie') || t.includes('shake') || t.includes('pancake')) {
+      return 'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('fries') || t.includes('chips') || t.includes('nachos') || t.includes('dip') || t.includes('pinwheels') || t.includes('tenders') || t.includes('nuggets')) {
+      return 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('chicken') || t.includes('parm') || t.includes('wings') || t.includes('skewers')) {
+      return 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('steak') || t.includes('beef') || t.includes('meatball')) {
+      return 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80';
+    }
+    if (t.includes('drink') || t.includes('cocktail') || t.includes('brew') || t.includes('coffee')) {
+      return 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80';
+    }
+    return 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=700&q=80';
+  }
+
   // --- Rendering Recipes View ---
   function renderRecipesView() {
     const filtered = getFilteredRecipes(state.recipes);
@@ -349,7 +476,7 @@
 
     // Update results meta
     const totalCount = state.recipes.length;
-    const isFiltered = state.searchQuery || state.categoryFilter !== 'all' || state.selectedTags.size > 0 || state.sortBy !== 'default';
+    const isFiltered = state.searchQuery || state.categoryFilter !== 'all' || state.sourceFilter !== 'all' || state.selectedTags.size > 0 || state.sortBy !== 'default';
     el.resultsCount.innerHTML = `Showing <strong>${sorted.length}</strong> of ${totalCount} recipes`;
     el.resetFiltersBtn.style.display = isFiltered ? 'inline-block' : 'none';
 
@@ -363,7 +490,7 @@
             </svg>
           </div>
           <h3 class="empty-state-title">No Recipes Match Your Filters</h3>
-          <p class="empty-state-desc">Try clearing your search term or unchecking some tag filters to expand results.</p>
+          <p class="empty-state-desc">Try clearing your search term or switching the source / tags to expand results.</p>
           <button class="btn-gold" id="emptyResetBtn">Reset All Filters</button>
         </div>
       `;
@@ -406,11 +533,12 @@
   // --- Recipe Card Component ---
   function createRecipeCard(recipe) {
     const card = document.createElement('div');
-    card.className = 'recipe-card';
+    const hasPhoto = state.viewMode === 'photo';
+    card.className = 'recipe-card' + (hasPhoto ? ' with-photo' : '');
     card.dataset.id = recipe.id;
 
     const isFav = state.favorites.has(recipe.id);
-    const authorText = recipe.author ? (recipe.author.startsWith('@') ? recipe.author : recipe.author) : 'Instagram';
+    const authorText = recipe.isProvisionOriginal ? 'Provision Classic' : (recipe.author || 'Instagram');
     const ingSnippet = (recipe.ingredients || []).slice(0, 3).join(' · ');
 
     let macrosHtml = '';
@@ -421,42 +549,102 @@
       macrosHtml += `<span class="macro-pill macro-cal">${recipe.macros.calories} Cal</span>`;
     }
 
-    const tagsHtml = (recipe.tags || []).slice(0, 3).map(t => `<span class="card-tag-pill">${t}</span>`).join('');
+    // Cooked badge from Obsidian food log
+    let cookBadgeHtml = '';
+    const times = recipe.timesCooked || 0;
+    if (times >= 5) {
+      cookBadgeHtml = `<span class="card-cook-badge badge-high-rotation" title="Cooked ${times} times according to your food log!">🍳 Made ${times}x</span>`;
+    } else if (times > 0) {
+      cookBadgeHtml = `<span class="card-cook-badge badge-cooked" title="Cooked ${times} times according to your food log!">🍳 Made ${times}x</span>`;
+    } else {
+      cookBadgeHtml = `<span class="card-cook-badge badge-never" title="Never logged in your food journal yet!">✨ Never Made</span>`;
+    }
 
-    card.innerHTML = `
-      <div>
-        <div class="card-top-row">
-          <span class="card-source-badge">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            ${escapeHtml(authorText)}
-          </span>
-          <button class="card-fav-btn ${isFav ? 'favorited' : ''}" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
-          </button>
+    const tagsHtml = (recipe.tags || [])
+      .filter(t => t !== 'High Rotation (5+)' && t !== 'Never Made Yet')
+      .slice(0, 3)
+      .map(t => `<span class="card-tag-pill">${t}</span>`)
+      .join('');
+
+    const imageUrl = getRecipeImage(recipe);
+
+    if (hasPhoto) {
+      card.innerHTML = `
+        <div class="card-photo-header">
+          <img src="${imageUrl}" alt="${escapeHtml(recipe.title)}" class="card-photo-img" loading="lazy">
+          <div class="card-photo-overlay">
+            <div class="card-top-row" style="margin-bottom: 0;">
+              <span class="card-source-badge">
+                ${recipe.isProvisionOriginal ? '🏛️ ' : '📸 '}
+                ${escapeHtml(authorText)}
+              </span>
+              <button class="card-fav-btn ${isFav ? 'favorited' : ''}" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              ${cookBadgeHtml}
+            </div>
+          </div>
         </div>
-        <h3 class="card-title">${escapeHtml(recipe.title)}</h3>
-        ${macrosHtml ? `<div class="card-macros">${macrosHtml}</div>` : ''}
-        ${ingSnippet ? `<p class="card-ingredients-snippet">${escapeHtml(ingSnippet)}...</p>` : ''}
-      </div>
-      <div>
-        ${tagsHtml ? `<div class="card-tags">${tagsHtml}</div>` : ''}
-        <div class="card-footer">
-          <span class="card-view-btn">
-            View Recipe
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
+        <div class="card-photo-body">
+          <div>
+            <h3 class="card-title">${escapeHtml(recipe.title)}</h3>
+            ${macrosHtml ? `<div class="card-macros">${macrosHtml}</div>` : ''}
+            ${ingSnippet ? `<p class="card-ingredients-snippet">${escapeHtml(ingSnippet)}...</p>` : ''}
+          </div>
+          <div>
+            ${tagsHtml ? `<div class="card-tags">${tagsHtml}</div>` : ''}
+            <div class="card-footer">
+              <span class="card-view-btn">
+                View Recipe
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    } else {
+      // Compact Menu Style Card
+      card.innerHTML = `
+        <div>
+          <div class="card-top-row">
+            <div style="display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap;">
+              <span class="card-source-badge">
+                ${recipe.isProvisionOriginal ? '🏛️ ' : '📸 '}
+                ${escapeHtml(authorText)}
+              </span>
+              ${cookBadgeHtml}
+            </div>
+            <button class="card-fav-btn ${isFav ? 'favorited' : ''}" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <h3 class="card-title">${escapeHtml(recipe.title)}</h3>
+          ${macrosHtml ? `<div class="card-macros">${macrosHtml}</div>` : ''}
+          ${ingSnippet ? `<p class="card-ingredients-snippet">${escapeHtml(ingSnippet)}...</p>` : ''}
+        </div>
+        <div>
+          ${tagsHtml ? `<div class="card-tags">${tagsHtml}</div>` : ''}
+          <div class="card-footer">
+            <span class="card-view-btn">
+              View Recipe
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </div>
+      `;
+    }
 
     // Click handler for modal
     card.addEventListener('click', (e) => {
@@ -479,13 +667,13 @@
       state.favorites.delete(recipeId);
       if (btnEl) {
         btnEl.classList.remove('favorited');
-        btnEl.querySelector('svg').setAttribute('fill', 'none');
+        btnEl.querySelector('svg')?.setAttribute('fill', 'none');
       }
     } else {
       state.favorites.add(recipeId);
       if (btnEl) {
         btnEl.classList.add('favorited');
-        btnEl.querySelector('svg').setAttribute('fill', 'currentColor');
+        btnEl.querySelector('svg')?.setAttribute('fill', 'currentColor');
       }
     }
     saveFavorites();
@@ -532,6 +720,12 @@
       updateModalFavBtn();
     });
 
+    // Video embed preview toggle
+    el.modalEmbedToggleBtn.addEventListener('click', () => {
+      state.isEmbedOpen = !state.isEmbedOpen;
+      updateEmbedState();
+    });
+
     // User tweaks auto-save
     let tweakTimer;
     el.userTweaksTextarea.addEventListener('input', (e) => {
@@ -561,15 +755,38 @@
     });
   }
 
+  function updateEmbedState() {
+    if (!state.activeRecipe || !state.activeRecipe.reelUrl) {
+      el.reelEmbedWrapper.classList.remove('open');
+      el.reelEmbedIframe.src = '';
+      el.modalEmbedToggleBtn.style.display = 'none';
+      return;
+    }
+
+    if (state.isEmbedOpen) {
+      el.reelEmbedWrapper.classList.add('open');
+      const cleanUrl = state.activeRecipe.reelUrl.replace(/\/$/, '') + '/embed';
+      el.reelEmbedIframe.src = cleanUrl;
+      el.modalEmbedToggleBtn.classList.add('active');
+      el.modalEmbedToggleBtn.textContent = '✕ Hide Video';
+    } else {
+      el.reelEmbedWrapper.classList.remove('open');
+      el.reelEmbedIframe.src = '';
+      el.modalEmbedToggleBtn.classList.remove('active');
+      el.modalEmbedToggleBtn.textContent = '▶️ Watch Video';
+    }
+  }
+
   function openCookModal(recipe) {
     state.activeRecipe = recipe;
     state.servingMultiplier = 1;
+    state.isEmbedOpen = false;
 
     // Reset scaler to 1x
     el.scalerBtns.forEach(b => b.classList.toggle('active', b.dataset.scale === '1'));
 
     // Populate header
-    el.modalAuthorBadge.textContent = recipe.author ? `Curated by ${recipe.author}` : 'Provision Kitchen';
+    el.modalAuthorBadge.textContent = recipe.isProvisionOriginal ? 'Provision Classic' : (recipe.author ? `Curated by ${recipe.author}` : 'Instagram Reel');
     el.modalTitle.textContent = recipe.title;
 
     // Populate macros
@@ -589,12 +806,37 @@
       }
     }
 
-    // Instagram reel button
+    // Food log history banner
+    const times = recipe.timesCooked || 0;
+    if (times > 0) {
+      el.modalHistoryBanner.style.display = 'flex';
+      const lastCookedStr = recipe.lastCookedDate ? formatDate(recipe.lastCookedDate) : 'recently';
+      el.modalHistoryBanner.innerHTML = `
+        <span style="font-size: 1.1rem;">🍳</span>
+        <span>You've cooked this <strong>${times} time${times > 1 ? 's' : ''}</strong> according to your meal journal &bull; Last made on <strong>${lastCookedStr}</strong>.</span>
+      `;
+    } else {
+      el.modalHistoryBanner.style.display = 'flex';
+      el.modalHistoryBanner.innerHTML = `
+        <span style="font-size: 1.1rem;">✨</span>
+        <span>You haven't logged making this dish yet &bull; A great pick when you're looking to try something fresh!</span>
+      `;
+    }
+
+    // Instagram reel links & video embed
     if (recipe.reelUrl) {
       el.modalReelBtn.href = recipe.reelUrl;
       el.modalReelBtn.style.display = 'inline-flex';
+      el.modalEmbedToggleBtn.style.display = 'inline-flex';
+      el.modalEmbedToggleBtn.textContent = '▶️ Watch Video';
+      el.modalEmbedToggleBtn.classList.remove('active');
+      el.reelEmbedWrapper.classList.remove('open');
+      el.reelEmbedIframe.src = '';
     } else {
       el.modalReelBtn.style.display = 'none';
+      el.modalEmbedToggleBtn.style.display = 'none';
+      el.reelEmbedWrapper.classList.remove('open');
+      el.reelEmbedIframe.src = '';
     }
 
     // Modal Fav Button
@@ -625,7 +867,19 @@
   function closeCookModal() {
     el.cookModal.classList.remove('open');
     document.body.style.overflow = '';
+    if (el.reelEmbedIframe) el.reelEmbedIframe.src = '';
     releaseWakeLock();
+  }
+
+  function formatDate(dStr) {
+    try {
+      const parts = dStr.split('-');
+      if (parts.length === 3) {
+        const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+    } catch (e) {}
+    return dStr;
   }
 
   function updateModalFavBtn() {
@@ -643,7 +897,6 @@
   // --- Dynamic Ingredient Scaling & Checklist ---
   function scaleIngredientString(text, mult) {
     if (mult === 1) return text;
-    // Regex for numbers like '1', '1.5', '1/2', '3/4', '2-3', '200'
     return text.replace(/^(\d+(?:\.\d+)?|\d+\/\d+|\d+\s*[-–]\s*\d+)/, (match) => {
       if (match.includes('/')) {
         const parts = match.split('/');
@@ -776,14 +1029,12 @@
   }
 
   function spinRoulette() {
-    // Pick high protein / delicious options
     const candidates = state.recipes.filter(r => (r.macros?.protein && r.macros.protein >= 25) || r.isProvisionOriginal);
     const pool = candidates.length > 0 ? candidates : state.recipes;
     const choice = pool[Math.floor(Math.random() * pool.length)];
 
     state.activeRecipe = choice;
 
-    // Trigger icon spin animation
     const icon = document.querySelector('.roulette-icon');
     if (icon) {
       icon.style.animation = 'none';
@@ -796,6 +1047,7 @@
     let macrosStr = '';
     if (choice.macros?.protein) macrosStr += `<span class="modal-macro-stat">💪 ${choice.macros.protein}g Protein</span>`;
     if (choice.macros?.calories) macrosStr += `<span class="modal-macro-stat">🔥 ${choice.macros.calories} Cal</span>`;
+    if (choice.timesCooked) macrosStr += `<span class="modal-macro-stat">🍳 Made ${choice.timesCooked}x</span>`;
     el.rouletteMacros.innerHTML = macrosStr;
 
     const ingText = (choice.ingredients || []).slice(0, 4).join(', ');
@@ -833,8 +1085,8 @@
 
   function setupCoffeeCalculator() {
     function recalculateCoffee(fromCups) {
-      const ratio = 16; // 1:16
-      const gramPerCupWater = 240; // ~240ml per cup
+      const ratio = 16;
+      const gramPerCupWater = 240;
 
       if (fromCups) {
         const cups = parseFloat(el.coffeeCupsInput.value) || 1;

@@ -126,6 +126,39 @@
       <!-- Search & Filters Control Card -->
       <div class="controls-card">
         
+        <!-- Source Filter & Visual View Mode Row -->
+        <div class="source-filter-row">
+          <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+            <span class="tags-label">Source:</span>
+            <div class="source-segmented-control">
+              <button class="source-btn active" data-source="all">
+                All Recipes
+                <span class="nav-count-badge" id="sourceCountAll">307</span>
+              </button>
+              <button class="source-btn" data-source="instagram">
+                📸 Instagram Reels
+                <span class="nav-count-badge" id="sourceCountIg">283</span>
+              </button>
+              <button class="source-btn" data-source="provision">
+                🏛️ Provision Classics
+                <span class="nav-count-badge" id="sourceCountProv">24</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="tags-label">Display:</span>
+            <div class="view-mode-toggle">
+              <button class="view-mode-btn active" id="viewModePhotoBtn" title="Show photo cards">
+                🖼️ Photos
+              </button>
+              <button class="view-mode-btn" id="viewModeCompactBtn" title="Compact menu cards">
+                📋 Compact
+              </button>
+            </div>
+          </div>
+        </div>
+
         <!-- Search Row -->
         <div class="search-row">
           <div class="search-box-wrapper">
@@ -150,7 +183,10 @@
             <span class="sort-label">Sort:</span>
             <select class="sort-select" id="sortSelect">
               <option value="default">Featured / Originals First</option>
-              <option value="protein">Highest Protein</option>
+              <option value="mostCooked">🔥 Most Cooked (Food Log)</option>
+              <option value="recentlyCooked">🕒 Recently Cooked</option>
+              <option value="neverCooked">✨ Never Made Yet</option>
+              <option value="protein">💪 Highest Protein</option>
               <option value="calories">Lowest Calories</option>
               <option value="alpha">Alphabetical (A–Z)</option>
               <option value="random">Shuffle / Random</option>
@@ -281,6 +317,7 @@
         <div class="modal-macros-row" id="modalMacrosRow">
           <!-- Dynamically populated macros -->
         </div>
+        <div class="modal-history-banner" id="modalHistoryBanner" style="display: none;"></div>
       </div>
 
       <!-- Action Tools Bar -->
@@ -317,6 +354,11 @@
             </svg>
             Save
           </button>
+
+          <!-- Instagram Reel Embed Toggle -->
+          <button class="tool-toggle-btn" id="modalEmbedToggleBtn" style="display: none;">
+            ▶️ Watch Video
+          </button>
         </div>
 
         <!-- Reel Link -->
@@ -326,12 +368,17 @@
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
-          Watch Reel ↗
+          Open in Instagram ↗
         </a>
       </div>
 
-      <!-- Modal Body (Two Columns) -->
+      <!-- Modal Body (Two Columns + Embed) -->
       <div class="modal-body">
+        
+        <!-- Video Embed Drawer -->
+        <div class="reel-embed-wrapper" id="reelEmbedWrapper">
+          <iframe id="reelEmbedIframe" class="reel-embed-frame" src="" loading="lazy" allowfullscreen></iframe>
+        </div>
         
         <!-- Ingredients Column -->
         <div class="ingredients-column">

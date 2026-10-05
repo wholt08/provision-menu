@@ -1,4 +1,4 @@
-// PROVISION Culinary Engine Database
+// PROVISION Culinary Engine Database (Synced with Food Log)
 window.PROVISION_DATA = {
   "recipes": [
     {
@@ -17,6 +17,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "High Protein",
         "Low Carb",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -40,7 +41,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Per flatbread (est.): 260 calories | 14g fat | 28g protein | 3g net carbs. Gluten-free and keto-friendly.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-chicken-enchilada-bake",
@@ -59,6 +63,7 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -89,7 +94,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "42g protein per serving. Works with frozen veggies and pre-cooked chicken; rice, quinoa, or pasta can be added.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "one-pot-hunters-chicken-rice",
@@ -105,6 +113,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -132,7 +141,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4. 644 calories per serving. About \u00a32.04 per portion based on UK shopping.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "garlic-chicken-tikka-slider-buns",
@@ -148,6 +160,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "High Rotation (5+)",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -177,7 +190,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 4. Per slider: 435 calories | 41.6g protein | 13.3g fat | 35.9g carbs.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 5,
+      "lastCookedDate": "2026-04-09",
+      "firstCookedDate": "2025-07-23"
     },
     {
       "id": "queso-chicken-rice",
@@ -196,7 +212,8 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Greek Yogurt",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "24 oz chicken breast",
@@ -212,7 +229,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 5 servings. Per serving: 515 calories | 48g protein | 51g carbs | 13g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-chicken-shawarma",
@@ -230,7 +250,8 @@ window.PROVISION_DATA = {
         "Chicken",
         "Greek Yogurt",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken marinade: 250g raw chicken breast cut into strips, 1 tsp garlic powder, 1 tsp paprika, 1 tsp turmeric, 1 tsp cumin, 1 tsp salt & pepper, 2 tbsp tomato paste, juice of 1/2 lemon",
@@ -248,7 +269,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 2 shawarma wraps (maybe 3). Per wrap (approx.): 390 calories | 45g protein | 35g carbs | 7g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza-flatbread",
@@ -265,6 +289,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
+        "High Rotation (5+)",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -291,7 +316,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Let the crust cool before slicing or it falls apart.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 15,
+      "lastCookedDate": "2026-01-18",
+      "firstCookedDate": "2025-07-15"
     },
     {
       "id": "chicken-bacon-ranch-burritos-meal-prep",
@@ -309,7 +337,8 @@ window.PROVISION_DATA = {
         "Chicken",
         "Greek Yogurt",
         "High Protein",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "17 oz chicken breast",
@@ -332,7 +361,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 6 burritos. Per burrito: 343 calories | 42g protein | 33g carbs | 13g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pull-apart-street-corn-chicken-wraps",
@@ -348,6 +380,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -377,7 +410,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4\u20136. Make-ahead: prepare through step 4, cover tightly with plastic wrap, and refrigerate up to 2 days; bake with a few extra minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "honey-bbq-chicken-and-potatoes",
@@ -393,7 +429,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "800g potatoes, cubed",
@@ -425,7 +462,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4. Per serving: 481 calories | 48.6g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chocolate-chip-baked-oats",
@@ -440,6 +480,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -462,7 +503,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Low sugar, gluten-free and dairy-free.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "macro-friendly-queso-chicken-rolls",
@@ -482,7 +526,8 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
-        "Low Carb"
+        "Low Carb",
+        "Never Made Yet"
       ],
       "ingredients": [
         "20 oz chicken breast (approx. 3 chicken breasts)",
@@ -501,7 +546,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 8 rolls. Per roll: 335 calories | 35g protein | 25g carbs | 9g fat. Store frozen and reheat by microwaving 2\u20133 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-chicken-fajita-mac-n-cheese",
@@ -517,7 +565,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Fajita seasoning mix: 1 tsp salt, 1 tsp oregano, 1 tsp garlic powder, 1 tsp onion powder, 1 tsp paprika, 1 tsp chilli powder, 1 tsp cumin",
@@ -531,7 +580,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "4 servings. Per serving: 568 calories | 56g protein | 54g carbs | 13g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chipotle-chicken-wrap",
@@ -559,7 +611,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Bold, spicy wrap with a creamy chipotle yogurt sauce. Source: @iramsfoodstory.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 2,
+      "lastCookedDate": "2026-06-19",
+      "firstCookedDate": "2025-11-17"
     },
     {
       "id": "airfryer-pepperoni-pesto-chicken-melt",
@@ -575,7 +630,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "2 chicken breasts",
@@ -594,7 +650,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 2. Ready in 17 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "trader-joe-s-philly-cheesesteak-tacos",
@@ -637,7 +696,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Top with sriracha for extra heat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-08-14",
+      "firstCookedDate": "2025-08-14"
     },
     {
       "id": "creamy-chicken-fajita-burritos",
@@ -655,7 +717,8 @@ window.PROVISION_DATA = {
         "Chicken",
         "Greek Yogurt",
         "High Protein",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "4 bell peppers (red/orange used)",
@@ -686,7 +749,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 10 burritos. Per burrito: 390 calories | 36g protein | 34g carbs | 12g fat. Store frozen. To reheat: microwave wrapped in a paper towel for 1 minute 15 seconds, then air fry at 360\u00b0F for 6\u20137 minutes to crisp up.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "hot-honey-chicken-crust-pizza",
@@ -702,7 +768,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 lb ground chicken",
@@ -728,7 +795,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "frozen-beefy-cheesy-burritos",
@@ -747,6 +817,7 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "Meal Prep",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -766,7 +837,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 6 burritos. Per burrito: 365 calories | 28g protein | 35g carbs | 13g fat. Store frozen; reheat by microwaving 2\u20133 minutes, or microwave 1\u20131.5 minutes to defrost then air fry or pan fry until crispy. Took under 20 minutes start to finish; easy to double or triple.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-buffalo-chicken-sandwich",
@@ -807,7 +881,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "425 calories | 44g protein | 23g net carbs | 19g fat. Pairs with the creator's high-protein ranch sauce (an extra 48 calories and 5g protein for 1/4 cup).\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 3,
+      "lastCookedDate": "2026-01-29",
+      "firstCookedDate": "2025-11-26"
     },
     {
       "id": "spicy-chipotle-chicken-burritos",
@@ -824,7 +901,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Greek Yogurt",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken: 2\u20133 chicken breasts (approx. 300g total), 1/2 tsp olive oil, salt, pepper, paprika, garlic powder, chili powder, oregano, and cumin, to season",
@@ -840,7 +918,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Yields 2 large burritos. Per burrito (approx.): 404 calories | 42.5g protein | 34g carbs | 10.5g fat. Chipotle peppers come canned in adobo sauce. Balance the heat with 1 tbsp honey or maple syrup in the sauce. Great meal prep: refrigerate up to 5 days, reheat in the microwave, and optionally toast in a pan. Done in 20 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-cheesy-garlic-chicken-parcel",
@@ -858,6 +939,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -879,7 +961,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 1 parcel. 471 calories | 55g protein | 33g carbs | 14g fat. Ready in 10 minutes; customizable with any high-protein filling.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "healthy-lava-cake-dessert",
@@ -896,6 +981,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -920,7 +1006,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "43g protein and 400 calories for the entire batch; divide into 2 or 3 servings. Low-carb and protein-packed.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "gym-freak-pizza-2-0",
@@ -939,7 +1028,8 @@ window.PROVISION_DATA = {
         "Chicken",
         "Greek Yogurt",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "100g self rising flour",
@@ -958,7 +1048,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "837 calories | 77g protein | 90g carbs | 15g fat for the whole pizza. Per slice: 105 calories | 9g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cbr-alfredo-pasta",
@@ -976,6 +1069,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1008,7 +1102,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 5 servings. Per serving: 529 calories | 50g protein | 15g fat | 48g carbs. A macro-friendly family favorite.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza",
@@ -1025,6 +1122,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1050,7 +1148,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "boursin-sausage-veg-orzo",
@@ -1066,6 +1167,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1090,7 +1192,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4\u20136. Garnish with chili flakes for a touch of spice.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "caesar-chicken-wrap",
@@ -1107,7 +1212,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Caesar seasoning",
@@ -1134,7 +1240,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros: 456 cals, 41g carbs, 19g fat, 46g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-blueberry-cheesecake-breakfast-edition",
@@ -1151,6 +1260,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1179,7 +1289,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "1 serving. Nutrition (per serving with blueberry topping): ~290 kcal, ~20g protein, ~34g carbs, ~5g fat, ~3g fiber.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crab-rangoon-grilled-cheese-sandwich",
@@ -1217,7 +1330,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-10-08",
+      "firstCookedDate": "2025-10-08"
     },
     {
       "id": "macro-friendly-queso-chicken-rolls-2",
@@ -1237,7 +1353,8 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
-        "Low Carb"
+        "Low Carb",
+        "Never Made Yet"
       ],
       "ingredients": [
         "20 oz chicken breast (~3 chicken breasts)",
@@ -1263,7 +1380,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 8 rolls. Per roll: 335 cals, 35g protein, 25g carbs, 9g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-chicken-pizza-crust",
@@ -1282,6 +1402,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1304,7 +1425,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "15-minute-garlic-sesame-noodles",
@@ -1321,6 +1445,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1344,7 +1469,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "For one serving. 497 kcals, 40g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "15-minute-street-corn-sheet-pan-nachos",
@@ -1360,6 +1488,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Healthified Comfort",
+        "High Rotation (5+)",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -1392,7 +1521,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 5,
+      "lastCookedDate": "2026-02-06",
+      "firstCookedDate": "2025-07-09"
     },
     {
       "id": "easy-high-protein-creamy-pasta-with-chicken-peas",
@@ -1409,6 +1541,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1430,7 +1563,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4. Macros per serving: 506 calories, 44g protein, 55g carbs, 15g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-alfredo",
@@ -1447,7 +1583,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup cottage cheese",
@@ -1468,7 +1605,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "big-mac-taquitos-30g-protein",
@@ -1486,6 +1626,7 @@ window.PROVISION_DATA = {
         "Beef",
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Low Carb"
       ],
       "ingredients": [
@@ -1506,7 +1647,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros for 2 large taquitos: 341 calories, 30g protein, 43g carbs, 18g fat, 30g fiber. Recipe makes 12 taquitos.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 19,
+      "lastCookedDate": "2026-03-29",
+      "firstCookedDate": "2025-07-06"
     },
     {
       "id": "viral-high-protein-pizza",
@@ -1524,6 +1668,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1548,7 +1693,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-garlic-bread-hack-26g-protein",
@@ -1564,6 +1712,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1581,7 +1730,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros: 380 calories, 26g protein, 40g carbs, 25g fat, 30g fiber.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "green-curried-chickpeas-with-rice",
@@ -1596,6 +1748,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1622,7 +1775,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4. Vegan, refined sugar-free, gluten-free. ~$1.49 AUD per serve.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-garlic-bread-hack-26g-protein-2",
@@ -1638,6 +1794,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1655,7 +1812,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros: 380 calories, 26g protein, 40g carbs, 25g fat, 30g fiber.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "grilled-cheese-hot-dogs",
@@ -1670,6 +1830,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -1687,7 +1848,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-smash-tacos",
@@ -1704,6 +1868,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Healthified Comfort",
+        "High Rotation (5+)",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -1726,7 +1891,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 5,
+      "lastCookedDate": "2026-06-18",
+      "firstCookedDate": "2025-07-10"
     },
     {
       "id": "high-protein-cottage-cheese-grilled-cheese",
@@ -1742,7 +1910,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup cottage cheese (blend smooth)",
@@ -1767,7 +1936,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros (approx for full sandwich): ~400 calories, ~40g protein, ~6g carbs, ~22g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "blueberry-chicken-sandwich-54g-protein",
@@ -1784,6 +1956,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1806,7 +1979,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros: 496 calories, 54g protein, 36g carbs, 14g fat. Chicken, compote, and mayo portions serve 4.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-crustless-pizza-bowl",
@@ -1823,7 +1999,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
-        "Low Carb"
+        "Low Carb",
+        "Never Made Yet"
       ],
       "ingredients": [
         "\u00bd onion, sliced",
@@ -1845,7 +2022,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "For one serving. 42g protein, 346 kcals.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "greek-yogurt-pizza",
@@ -1880,7 +2060,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-11-21",
+      "firstCookedDate": "2025-11-21"
     },
     {
       "id": "cheese-crusted-flying-dutchman",
@@ -1897,6 +2080,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1920,7 +2104,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chili-cheese-cottage-cheese-toast",
@@ -1935,7 +2122,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "\u00bd cup low fat cottage cheese",
@@ -1957,7 +2145,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~23g protein, 260 kcal.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-chicken-parm",
@@ -1975,6 +2166,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -1995,7 +2187,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros: 589 cals, 15g carbs, 13g fat, 95g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "protein-cookie-dough",
@@ -2011,7 +2206,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "\u00be cup Greek yogurt",
@@ -2029,7 +2225,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~40g protein for the whole bowl.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "flying-dutchman-burger-cheesy-onion-smash",
@@ -2076,7 +2275,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 2,
+      "lastCookedDate": "2025-11-17",
+      "firstCookedDate": "2025-11-16"
     },
     {
       "id": "cottage-cheesecake",
@@ -2092,7 +2294,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup cottage cheese",
@@ -2113,7 +2316,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-chili-cheese-toast",
@@ -2129,7 +2335,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "2 slices high-protein or whole-grain bread",
@@ -2160,7 +2367,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~400\u2013450 calories, 28\u201332 g protein per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cilantro-garlic-chicken-bacon-alfredo",
@@ -2177,7 +2387,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "8 oz (uncooked) Banza angel hair protein pasta",
@@ -2200,7 +2411,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 4 servings \u2014 480 cal, 50 g protein, 48 g carbs, 9 g fat each.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "banana-blueberry-muffins",
@@ -2214,7 +2428,9 @@ window.PROVISION_DATA = {
         "carbs": 18,
         "fat": 16
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "2 medium bananas",
         "200 g blueberries",
@@ -2231,7 +2447,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "241 cal, 9 g protein, 18 g carbs, 16 g fat per muffin.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-buldak-carbonara-with-steak",
@@ -2246,7 +2465,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Beef"
+        "Beef",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 pack Buldak Carbonara Ramen",
@@ -2270,7 +2490,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "buffalo-chicken-pinwheels",
@@ -2286,6 +2509,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2309,7 +2533,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheddar-bacon-ranch-fries",
@@ -2326,7 +2553,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "2 medium russet potatoes",
@@ -2350,7 +2578,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "682 cal, 59 g protein, 82 g carbs, 15 g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-cheesecake",
@@ -2366,7 +2597,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup (200 g) non-fat Greek yogurt",
@@ -2383,7 +2615,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "278 kcal, 32 g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "grilled-cottage-cheese-toast",
@@ -2400,6 +2635,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2421,7 +2657,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "340 kcal, 30 g protein, 36 g carbs, 9 g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "strawberry-cheesecake-cottage-cheese-ice-cream",
@@ -2454,7 +2693,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Ninja Creami hack: store leftovers in a Creami pint and spin for an extra-creamy texture.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-07-20",
+      "firstCookedDate": "2025-07-20"
     },
     {
       "id": "grilled-cheese-pizza-rolls",
@@ -2471,7 +2713,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "40 oz lean ground beef (96/4) (1135 g)",
@@ -2494,7 +2737,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 10 rolls \u2014 350 cal, 50 g protein, 19 g carbs, 8 g fat per roll.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "one-pan-animal-fries",
@@ -2512,6 +2758,7 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -2544,7 +2791,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 4 servings \u2014 452 cal, 48 g protein, 8.5 g fat, 47 g carbs per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-stuffed-chicken-tenders",
@@ -2560,6 +2810,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2583,7 +2834,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "For a tender texture, air fry the jalape\u00f1o halves a few minutes after slicing before stuffing. Can also bake at 425\u00b0F for 20\u201330 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheeseburger-bite-meal-prep",
@@ -2601,6 +2855,7 @@ window.PROVISION_DATA = {
         "Beef",
         "Healthified Comfort",
         "Meal Prep",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2618,7 +2873,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-big-mac",
@@ -2636,7 +2894,8 @@ window.PROVISION_DATA = {
         "Beef",
         "Healthified Comfort",
         "High Protein",
-        "Low Carb"
+        "Low Carb",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3.2 oz 96/4 ground beef",
@@ -2662,7 +2921,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 5 servings \u2014 390 cal, 50 g protein, 17 g fat, 18 g carbs each.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-mac-and-cheese",
@@ -2695,7 +2957,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "430 kcal, 30 g protein, 47 g carbs, 15 g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 3,
+      "lastCookedDate": "2025-11-28",
+      "firstCookedDate": "2025-07-06"
     },
     {
       "id": "chicken-bacon-ranch-burritos",
@@ -2713,7 +2978,8 @@ window.PROVISION_DATA = {
         "Chicken",
         "Cottage Cheese",
         "High Protein",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup cottage cheese (0% fat)",
@@ -2736,7 +3002,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "430 cal, 64 g protein, 11 g carbs, 11 g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-protein-queso",
@@ -2752,7 +3021,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup cottage cheese",
@@ -2769,7 +3039,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-empanadas",
@@ -2785,6 +3058,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2805,7 +3079,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Pro tip: mix ranch seasoning into the Parmesan before breading.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-pizza-rolls",
@@ -2823,6 +3100,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2842,7 +3120,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Pro tip: grease your hands before shaping so the chicken doesn't stick.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "fajita-chicken-tray-bake",
@@ -2859,6 +3140,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -2879,7 +3161,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4 \u2014 530 cal, 54 g protein, 7 g fiber per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-buffalo-chicken-mozzarella-bites",
@@ -2895,7 +3180,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "6 oz lean ground chicken",
@@ -2914,7 +3200,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "You can also form the chicken around whole mozzarella sticks.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "easy-air-fryer-low-carb-buffalo-chicken-pizza",
@@ -2933,6 +3222,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "Low Carb",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -2949,7 +3239,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crab-rangoon-pinwheels-sweet-sour-sauce",
@@ -2963,7 +3256,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Pinwheels:",
         "Cream cheese",
@@ -2990,7 +3285,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "everything-bagel-stuffed-chicken",
@@ -3025,7 +3323,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Tent loosely with foil for the first 20 minutes, then remove the foil to finish.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 2,
+      "lastCookedDate": "2025-08-29",
+      "firstCookedDate": "2025-08-12"
     },
     {
       "id": "easy-sandwich-bread",
@@ -3040,6 +3341,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3061,7 +3363,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Bake at 350\u00b0F for 30 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-crab-rangoon",
@@ -3077,7 +3382,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "224g cottage cheese",
@@ -3100,7 +3406,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "375 calories per serving; makes 2 servings of 6. 30g protein, 9g carbs, 1g fat per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-pizza-bowls",
@@ -3118,7 +3427,8 @@ window.PROVISION_DATA = {
         "Beef",
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1/4 cup flour",
@@ -3140,7 +3450,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-shawarma-skewers",
@@ -3157,6 +3470,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Greek Yogurt",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3181,7 +3495,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-creamy-queso-dip",
@@ -3198,7 +3515,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 cup cottage cheese",
@@ -3215,7 +3533,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "homemade-easy-tortillas",
@@ -3230,6 +3551,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -3249,7 +3571,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Only 4 ingredients, made in under 15 minutes. Makes 8 tortillas.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "frozen-banana-protein-dessert-bar",
@@ -3263,7 +3588,9 @@ window.PROVISION_DATA = {
         "carbs": 50,
         "fat": 9
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "1 banana",
         "50g peanut butter powder (Pb fit) mixed with water",
@@ -3277,7 +3604,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros for the whole bar: 350 kcal, 27g protein, 50g carbs, 9g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-crab-rangoon-balls",
@@ -3292,6 +3622,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3311,7 +3642,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Extra delicious with sugar-free sweet chili sauce.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "fudgy-reese-s-brownie",
@@ -3326,7 +3660,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 egg",
@@ -3345,7 +3680,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chocolate-protein-cheesecake",
@@ -3360,7 +3698,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3/4 cup cottage cheese",
@@ -3379,7 +3718,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "fudgy-reese-s-lava-brownie",
@@ -3394,7 +3736,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 egg",
@@ -3413,7 +3756,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "healthy-jalape-o-popper-protein-bagels",
@@ -3428,7 +3774,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3/4 cup almond flour (or any flour)",
@@ -3446,7 +3793,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Tip: use about 20% regular or gluten-free flour and 80% almond flour to improve texture without adding many extra carbs.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "d-ner-chicken-doner",
@@ -3461,7 +3811,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "2 chicken breasts",
@@ -3491,7 +3842,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-oreo-mcflurry-dupe-ninja-creami",
@@ -3507,7 +3861,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 scoop vanilla protein powder",
@@ -3526,7 +3881,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros: ~250\u2013300 calories, ~30\u201335g protein, ~20\u201325g carbs, ~5\u20138g fat.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pull-apart-pepperoni-pizza-bread",
@@ -3541,7 +3899,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "32 oz (2 pounds) chopped pizza dough",
@@ -3560,7 +3919,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes a 12-inch loaf.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "hot-honey-shrimp-veggie-bowl",
@@ -3575,6 +3937,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3592,7 +3955,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crispy-boneless-buffalo-wings",
@@ -3607,7 +3973,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "12 oz ground chicken",
@@ -3623,7 +3990,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "1-minute-toaster-pepperoni-pizza-pocket",
@@ -3638,7 +4008,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "4 large flour tortillas",
@@ -3656,7 +4027,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 4 pizza pockets.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "healthy-fudgy-brownies-zucchini",
@@ -3671,6 +4045,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3692,7 +4067,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "big-mac-boerie-rolls",
@@ -3706,7 +4084,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Boerewors (wors)",
         "Hotdog rolls",
@@ -3727,7 +4107,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "grinder-deli-sandwich",
@@ -3742,7 +4125,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "7 oz deli turkey",
@@ -3766,7 +4150,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "462 calories, 41g protein per sandwich.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-bacon-ranch-sandwich",
@@ -3781,7 +4168,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3 chicken breasts, thinly sliced",
@@ -3800,7 +4188,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "reese-s-ice-cream-bars",
@@ -3815,7 +4206,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1/2 cup Greek yogurt",
@@ -3831,7 +4223,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "homemade-flour-tortillas-buttery",
@@ -3846,6 +4241,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -3870,7 +4266,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 12 tortillas.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "restaurant-style-ranch-dressing",
@@ -3885,7 +4284,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1/2 cup plain Greek yogurt",
@@ -3909,7 +4309,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Best made a few hours before you need it so the flavor develops and it thickens up a little.\n\n---\n\n## Reconstructed from video\n\n*These were put together from the video's narration and on-screen text plus the caption. Where the creator never gave exact quantities, that's noted on the card.*",
       "isReconstructed": true,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "bang-bang-chicken-skewers",
@@ -3925,6 +4328,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3945,7 +4349,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Oven alternative: bake at 375\u00b0F for 30\u201340 minutes. Lime juice was used in the sauce but omitted from the caption's ingredient list.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-jalape-o-popper-chicken-wraps",
@@ -3961,6 +4368,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -3985,7 +4393,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 1 \u2014 480 calories, 52.5g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "buffalo-chicken-tacos",
@@ -4004,6 +4415,7 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -4024,7 +4436,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "The buffalo chicken makes 4 meal-prep portions (~245 cal, 47g protein each) and is versatile \u2014 use in wraps, salads, rice bowls, sandwiches or loaded baked potatoes. Per taco: ~145 cal, 15g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "mexican-street-corn-inspired-pasta-salad",
@@ -4057,7 +4472,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-10-01",
+      "firstCookedDate": "2025-10-01"
     },
     {
       "id": "air-fryer-chicken-gyros",
@@ -4074,6 +4492,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4097,7 +4516,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 4. Can be halved for a kid-sized portion.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "one-pan-cheesy-buffalo-chicken-rice",
@@ -4113,6 +4535,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -4138,7 +4561,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 3 portions (easily doubled) \u2014 542 cal and 55.4g protein per serving, excluding toppings. Keeps in the fridge up to 3 days.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "garlic-parmesan-chicken-skewers",
@@ -4153,7 +4579,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken pieces (tenders, thighs or breast), cut into chunks",
@@ -4178,7 +4605,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-sausage-rice-bowls",
@@ -4195,6 +4625,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Greek Yogurt",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4215,7 +4646,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Ready in about 15 minutes. The sauce works on just about everything.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-cajun-shrimp-pasta",
@@ -4229,7 +4663,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Shrimp",
         "Butter or oil",
@@ -4251,7 +4687,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "garlic-butter-pizza-bake",
@@ -4267,6 +4706,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4290,7 +4730,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Easy to customize with different sauces, meats or cheeses.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-loaded-hash-browns",
@@ -4306,7 +4749,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3 hash brown patties",
@@ -4327,7 +4771,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-breakfast-wrap",
@@ -4342,7 +4789,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Splash of oil",
@@ -4364,7 +4812,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "everything-bagel-cottage-cheese-breakfast-tacos",
@@ -4380,7 +4831,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1/4 cup cottage cheese",
@@ -4399,7 +4851,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "24g protein per taco. Other topping ideas: chili crisp and green onion, or arugula and pesto.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-enchiladas-chicken-beef",
@@ -4438,7 +4893,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "2 chicken enchiladas: 465 cal, 42g protein, 37g carbs, 17g fat. 2 beef enchiladas: 460 cal, 37g protein, 33g carbs, 15g fat. Great for meal prep and freezer meals.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-09-06",
+      "firstCookedDate": "2025-09-06"
     },
     {
       "id": "bang-bang-airfryer-chicken",
@@ -4455,6 +4913,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Air Fryer",
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4472,7 +4931,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "43g-protein-toast",
@@ -4489,6 +4951,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4507,7 +4970,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Totals 43g protein (bread 14g + eggs 18g + yogurt 11g). No protein powder needed; ready in 5 minutes.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-tortilla-garlic-bread",
@@ -4522,7 +4988,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Air Fryer"
+        "Air Fryer",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Tortillas",
@@ -4540,7 +5007,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-grilled-cheese-toastie",
@@ -4555,7 +5025,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Jalape\u00f1o-popper mix: 1/4 cup cream cheese, 3 tbsp mayo (can swap for Greek yogurt), diced jalape\u00f1os, grated mozzarella or cheese of choice, chopped scallions, hot sauce, salt, pepper and seasonings of choice",
@@ -4574,7 +5045,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "The leftover jalape\u00f1o-popper mix doubles as a dip \u2014 serve with crackers or crudit\u00e9s.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "3-ingredient-protein-cookies",
@@ -4589,6 +5063,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4608,7 +5083,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~15g protein per cookie.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheesy-garlic-bread-muffins",
@@ -4623,6 +5101,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4641,7 +5120,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 6 large pull-apart muffins \u2014 great as an appetizer or game-day snack.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chilli-oil-scrambled-eggs-over-avocado-toast",
@@ -4655,7 +5137,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Eggs, beaten",
         "Chilli oil (homemade)",
@@ -4673,7 +5157,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-cottage-cheese-pizza",
@@ -4691,6 +5178,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4709,7 +5197,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza-bites",
@@ -4725,7 +5216,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Egg",
@@ -4747,7 +5239,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "About 20g protein per serving.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "taco-rollup-meal-prep",
@@ -4763,7 +5258,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "High Protein",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Ground turkey",
@@ -4784,7 +5280,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "500 cal and 52g protein per serving. Full recipe: https://simplerecipesbysam.com/taco-roll-up-meal-prep/\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "3-minute-microwave-berry-crumble",
@@ -4799,7 +5298,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "125g frozen berries",
@@ -4821,7 +5321,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "No microwave? Air fry 15 min at 150\u00b0C, or bake 15 min at 170\u00b0C fan. Substitutions: use oat flour instead of protein powder (add 1 tbsp syrup instead of 1/2 tbsp); swap peanut butter for melted butter or coconut oil.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "peanut-butter-chocolate-discs",
@@ -4837,7 +5340,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 ripe banana, mashed",
@@ -4858,7 +5362,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "No-bake, high-protein sweet treat. Store in a freezer-safe container in the freezer. Estimated ~180 cal and 5g protein per disc.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-italian-grinder-wrap",
@@ -4875,6 +5382,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -4897,7 +5405,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Over 50g protein.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crispy-rice-omelette",
@@ -4931,7 +5442,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-10-21",
+      "firstCookedDate": "2025-10-21"
     },
     {
       "id": "crispy-chickpea-taquitos-with-spicy-queso",
@@ -4947,6 +5461,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -4968,7 +5483,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Vegan. Takes about 35 minutes. Comment \"Recipe\" on the reel for the full recipe link, or find it via the link in the creator's bio.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "tomato-pesto-baked-feta-spaghetti-squash",
@@ -4985,6 +5503,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -5009,7 +5528,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Pairs well with chicken meatballs or any protein. Vegetarian, low-carb and gluten-free.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pizza-cupcakes",
@@ -5025,6 +5547,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -5048,7 +5571,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-parm-sandwiches",
@@ -5066,6 +5592,7 @@ window.PROVISION_DATA = {
         "Air Fryer",
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -5087,7 +5614,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 2 sandwiches \u2014 670 cal, 50g protein, 58g carbs, 26g fat each.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "big-mac-muffin-cups",
@@ -5102,7 +5632,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Beef"
+        "Beef",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Tater tots",
@@ -5121,7 +5652,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "tortilla-cheese-crust-breakfast-pizza",
@@ -5136,7 +5670,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 large flour tortilla",
@@ -5158,7 +5693,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Very flexible \u2014 swap the sauce or toppings to suit breakfast, snack or late-night mode.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-toast",
@@ -5173,7 +5711,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "115g cottage cheese (2%)",
@@ -5190,7 +5729,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "27g protein including the bread.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-chips",
@@ -5223,7 +5765,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Double the recipe to make more chips.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-09-20",
+      "firstCookedDate": "2025-09-20"
     },
     {
       "id": "street-corn-chicken-wrap",
@@ -5240,7 +5785,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Air-fried chicken pieces, chopped",
@@ -5260,7 +5806,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~45g protein.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-hot-honey-pizza-dip",
@@ -5277,7 +5826,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cream cheese",
@@ -5297,7 +5847,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "2-ingredient-banana-donut-holes",
@@ -5312,6 +5865,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -5331,7 +5885,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "salted-caramel-cottage-cheese-ice-cream",
@@ -5346,7 +5903,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -5366,7 +5924,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "black-bean-enchilada-skillet",
@@ -5382,6 +5943,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Healthified Comfort",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -5408,7 +5970,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "One-pot meal, 30 minutes or less. Use vegan cheese to keep it fully plant-based.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "5-minute-high-protein-cheesecake",
@@ -5425,6 +5990,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -5444,7 +6010,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~300 calories and 39g protein per serving. Great as a post-workout snack.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheesy-chicken-parm-garlic-bread",
@@ -5459,7 +6028,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 loaf of bread, halved",
@@ -5482,7 +6052,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-broccoli",
@@ -5497,7 +6070,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Air Fryer"
+        "Air Fryer",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Broccoli, broken into florets",
@@ -5518,7 +6092,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-crust-pepperoni-pizza",
@@ -5536,6 +6113,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -5559,7 +6137,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "The creator found Kalona cottage cheese works best; if your cottage cheese is very wet, drain or squeeze it first. Community estimates ~45g protein per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-breakfast-toast",
@@ -5574,7 +6155,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Sourdough or any thick bread",
@@ -5594,7 +6176,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Oven alternative: bake at 400\u00b0F for 8\u201312 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-greek-yogurt-cream-cheese",
@@ -5610,7 +6195,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 container (32 oz) plain Greek yogurt",
@@ -5627,7 +6213,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~11g protein per serving. This is essentially homemade labneh; store covered in the refrigerator.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-cajun-shrimp-dinner",
@@ -5642,7 +6231,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Air Fryer"
+        "Air Fryer",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Shrimp",
@@ -5663,7 +6253,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "italian-sub-with-cottage-cheese-wrap",
@@ -5708,7 +6301,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Kalona cottage cheese works best; brands cook differently. Community estimates ~400 kcal and 50\u201360g protein for the whole sandwich. Adding an egg to the cottage cheese base can help it hold together.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-10-12",
+      "firstCookedDate": "2025-10-12"
     },
     {
       "id": "instant-ramen-protein-hack",
@@ -5744,7 +6340,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "770 cal, 50g protein, 79.5g carbs, 25.5g fat as shown. Very high in sodium \u2014 cut back on the seasoning packet if that's a concern.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-11-08",
+      "firstCookedDate": "2025-11-08"
     },
     {
       "id": "cottage-cheese-blondies",
@@ -5759,7 +6358,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -5778,7 +6378,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~17g protein per blondie; gluten-free.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crispy-chicken-parm-wraps",
@@ -5794,7 +6397,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken breast, diced",
@@ -5817,7 +6421,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~500 calories, 48g protein, 19g fiber per wrap. No frying oil needed.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pepperoni-bread-with-la-scala-chopped-salad",
@@ -5832,7 +6439,8 @@ window.PROVISION_DATA = {
         "fat": 24
       },
       "tags": [
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Bread: 150g mozzarella, shredded; 14 turkey pepperoni",
@@ -5850,7 +6458,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Per half: 373 cal, 31g protein, 11g carbs, 24g fat, 2.5g fiber.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheesy-parm-fries-with-garlic-parm-chicken",
@@ -5867,7 +6478,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Healthified Comfort",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Potatoes",
@@ -5893,7 +6505,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Works single-serve or as meal prep. You can shortcut with store-bought alfredo mixed with garlic parm sauce.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "spicy-sushi-nachos-cali-style",
@@ -5935,7 +6550,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 3,
+      "lastCookedDate": "2026-02-27",
+      "firstCookedDate": "2025-08-21"
     },
     {
       "id": "elote-chicken-tacos",
@@ -5952,6 +6570,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Healthified Comfort",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -5980,7 +6599,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Any tortilla works; it can also be served as a bowl with rice.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "bbq-chicken-dip",
@@ -5996,6 +6618,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -6021,7 +6644,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-caesar-salad-nachos",
@@ -6037,7 +6663,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken breasts",
@@ -6063,7 +6690,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "orzo-al-limone-with-crispy-parmesan-chicken",
@@ -6078,7 +6708,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken cutlets",
@@ -6100,7 +6731,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Community tip: don't use butter in the panko coating \u2014 it can make it soggy.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "easy-breakfast-egg-nests",
@@ -6115,6 +6749,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6134,7 +6769,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "For a crunchier hash brown, bake the hash brown cups first before adding the egg.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "garlic-parm-burger-bombs",
@@ -6152,6 +6790,7 @@ window.PROVISION_DATA = {
         "Beef",
         "Greek Yogurt",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6170,7 +6809,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 6 servings \u2014 ~200 cal, 4g fat, 22g carbs, 18g protein each. Rinsing and drying the shredded cheese helps it melt creamier.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crispy-cottage-cheese-chips",
@@ -6186,6 +6828,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6205,7 +6848,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheesy-buffalo-chicken-croissants",
@@ -6220,7 +6866,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Crescent/croissant dough",
@@ -6242,7 +6889,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "tomato-and-goat-cheese-tart",
@@ -6257,6 +6907,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -6281,7 +6932,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "An easy, budget-friendly summer dish (~$10 in ingredients). Community tip: salt and drain the tomato slices first to keep the crust from getting soggy.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza-toast",
@@ -6299,6 +6953,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6322,7 +6977,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~35g protein per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza-toast-2",
@@ -6340,6 +6998,7 @@ window.PROVISION_DATA = {
         "Cottage Cheese",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6363,7 +7022,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~35g protein per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "greek-style-breakfast-quiche",
@@ -6378,7 +7040,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 large tortilla (low-carb)",
@@ -6403,7 +7066,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "philly-cheese-cruncher",
@@ -6421,6 +7087,7 @@ window.PROVISION_DATA = {
         "Air Fryer",
         "Beef",
         "Healthified Comfort",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -6442,7 +7109,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~26g protein and 3g net carbs per roll. You can swap the beef for turkey.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-alfredo-flatbread",
@@ -6457,7 +7127,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "King's Hawaiian Original Hawaiian Sweet Rolls",
@@ -6488,7 +7159,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pull-apart-fauxcaccia-pizza",
@@ -6503,7 +7177,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Frozen Rhodes dinner rolls, thawed",
@@ -6527,7 +7202,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheesy-egg-sandwich-air-fryer",
@@ -6543,6 +7221,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6563,7 +7242,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Ready in 10 minutes. Some users report undercooked yolks \u2014 try lowering the temp slightly or adding the cheese partway through.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "quick-herb-bread-greek-yogurt",
@@ -6579,6 +7261,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6597,7 +7280,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 1 mini loaf. Gluten-free: use gluten-free self-raising flour + \u2153 tsp xanthan gum.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-cottage-cheese-pancake-protein-loaded",
@@ -6615,6 +7301,7 @@ window.PROVISION_DATA = {
         "Air Fryer",
         "Beef",
         "Cottage Cheese",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6636,7 +7323,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "big-mac-cheese-pickle-tacos",
@@ -6654,6 +7344,7 @@ window.PROVISION_DATA = {
         "Beef",
         "Greek Yogurt",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6673,7 +7364,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Per taco: ~130 cal, 2g fat, 5g carbs, 22g protein. (Above is per taco.)\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-tortilla-chips",
@@ -6691,6 +7385,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6708,7 +7403,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Macros for the whole recipe: 515 kcal, 26g protein, 19g fat, 58g carbs.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza-buns",
@@ -6724,7 +7422,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 egg",
@@ -6748,7 +7447,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "20g protein per serving; no-yeast dough with no rising time.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "healthy-girl-lunch-sub",
@@ -6764,7 +7466,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "Low Carb"
+        "Low Carb",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 low-cal, high-fiber Hawaiian keto hot dog bun",
@@ -6791,7 +7494,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-flatbread",
@@ -6806,7 +7512,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -6822,7 +7529,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-baked-eggs",
@@ -6839,6 +7549,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -6858,7 +7569,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "5-minute prep; about 31g protein and 350 calories for the batch.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "salted-caramel-cottage-cheese-ice-cream-2",
@@ -6874,7 +7588,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -6892,7 +7607,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "High-protein, low-sugar dessert; texture can turn icy if frozen too hard \u2014 let it sit out briefly before scooping.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "hot-honey-eggs",
@@ -6906,7 +7624,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Honey",
         "Shredded mozzarella (generous amount)",
@@ -6926,7 +7646,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 1. Crispy edges, runny yolks, and a sweet-spicy caramelised cheese base.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "grilled-cheese-hot-dog",
@@ -6962,7 +7685,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 2,
+      "lastCookedDate": "2026-03-01",
+      "firstCookedDate": "2025-09-20"
     },
     {
       "id": "stuffed-crust-big-mac-pizza",
@@ -6980,6 +7706,7 @@ window.PROVISION_DATA = {
         "Beef",
         "Greek Yogurt",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7010,7 +7737,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "shawarma-sheet-pan-wraps-with-fries",
@@ -7028,7 +7758,8 @@ window.PROVISION_DATA = {
         "Beef",
         "Chicken",
         "Greek Yogurt",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Raw meat (chicken or beef), cut into pieces",
@@ -7055,7 +7786,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-cottage-cheese-queso",
@@ -7073,7 +7807,8 @@ window.PROVISION_DATA = {
         "Beef",
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Ground beef",
@@ -7095,7 +7830,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "22g protein per serving; gluten-free.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-cottage-cheese-toast",
@@ -7113,6 +7851,7 @@ window.PROVISION_DATA = {
         "Air Fryer",
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7133,7 +7872,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "High-protein vegetarian breakfast; takes about 10 minutes to put together.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-pizza-bread",
@@ -7150,7 +7892,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Air Fryer",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "4 slices low-cal Italian bread (about 70 cal per slice)",
@@ -7170,7 +7913,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Per slice: 142 cal | 15g protein | 2g fat | 28g carbs. Whole batch: 568 cal | 59g protein | 10g fat | 112g carbs.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "low-cal-buffalo-chicken-sliders",
@@ -7186,6 +7932,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7215,7 +7962,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Stated macros per slider: 175 cal | 14g protein | 6g fat | 15g carbs. Whole batch: 1577 cal | 127g protein | 54g fat | 137g carbs. Note: commenters questioned whether the per-slider calorie count is realistic \u2014 use your own judgment.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-corn-ribs",
@@ -7230,7 +7980,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Air Fryer"
+        "Air Fryer",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Fresh corn on the cob",
@@ -7251,7 +8002,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Only eat the corn kernels \u2014 bite them off the cob like ribs.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheese-crust-breakfast-pizza",
@@ -7268,6 +8022,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7289,7 +8044,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Low-carb, high-protein; fully customisable with any toppings.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "easy-focaccia-pizza",
@@ -7305,6 +8063,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Healthified Comfort",
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -7336,7 +8095,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "blackened-chicken-with-creamy-tuscan-sauce",
@@ -7351,7 +8113,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken breasts",
@@ -7385,7 +8148,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "tater-tot-clusters",
@@ -7400,6 +8166,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7420,7 +8187,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Perfect little appetizer or snack.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "italian-chicken-sheet-pan-dinner",
@@ -7436,6 +8206,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -7454,7 +8225,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Easy, healthy dinner \u2014 ready in one pan.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "2-ingredient-cottage-cheese-flatbread",
@@ -7469,7 +8243,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -7486,7 +8261,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "11g of protein per flatbread.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "tomato-egg-and-cheese-pita-sandwich",
@@ -7500,7 +8278,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Olive oil",
         "Sliced tomato",
@@ -7521,7 +8301,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-beef-meal-prep-burritos",
@@ -7539,7 +8322,8 @@ window.PROVISION_DATA = {
         "Beef",
         "Greek Yogurt",
         "High Protein",
-        "Meal Prep"
+        "Meal Prep",
+        "Never Made Yet"
       ],
       "ingredients": [
         "6 large xtreme wellness wraps",
@@ -7560,7 +8344,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Per burrito: 390 cal | 47g protein | 30g fat | 34g carbs.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "5-minute-feta-fried-eggs",
@@ -7575,6 +8362,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -7595,7 +8383,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Works with practically any hard cheese (e.g. Parmesan frico) and probably other crumbly ones too. Skip added oil \u2014 the cheese gets crispier without it.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chipotle-avocado-breakfast-sliders",
@@ -7610,7 +8401,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Beef"
+        "Beef",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Hawaiian rolls",
@@ -7643,7 +8435,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Great for feeding a crowd in the morning.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "2-ingredient-air-fryer-bread-mini-loaf",
@@ -7659,6 +8454,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7675,7 +8471,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 1 mini loaf. Gluten-free version: use gluten-free self-raising flour + 1/3 tsp xanthan gum.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pepperoni-pizza-caesar-wrap",
@@ -7692,7 +8491,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Shredded mozzarella cheese",
@@ -7714,7 +8514,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "High-protein, low-carb pizza vibes. Quantities and the exact dressing recipe weren't given.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "hot-honey-pizza-tots",
@@ -7730,7 +8533,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3 cups tater tots of choice",
@@ -7750,7 +8554,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chilli-cheese-cottage-cheese-toast",
@@ -7765,7 +8572,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3 tbsp cottage cheese",
@@ -7788,7 +8596,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crunchy-cottage-cheese-protein-chips",
@@ -7804,6 +8615,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7822,7 +8634,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "For extra crunch, blend the cottage cheese with 1/4 cup grated Parmesan before scooping and topping with cheddar and ranch seasoning.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "3-ingredient-protein-cookies-2",
@@ -7836,7 +8651,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "1 ripe banana",
         "1 scoop protein powder",
@@ -7853,7 +8670,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Advertised as 60g of protein for the batch.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jala-cheese-nos",
@@ -7868,7 +8688,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Shredded cheese",
@@ -7886,7 +8707,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-ice-cream",
@@ -7902,6 +8726,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7923,7 +8748,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "26g of protein for the batch. Freezing time wasn't given.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-breakfast-toast-2",
@@ -7941,6 +8769,7 @@ window.PROVISION_DATA = {
         "Air Fryer",
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -7963,7 +8792,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "A 10-minute high-protein vegetarian breakfast.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "protein-cheesecake-cups",
@@ -7978,7 +8810,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1.5 cups cottage cheese",
@@ -7995,7 +8828,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "About 35g of protein per bowl when using low-fat cottage cheese. Unflavored protein powder also works \u2014 sweeten with your favorite sweetener and vanilla extract.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "italian-dressing-chicken-tenders",
@@ -8010,7 +8846,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "4\u20136 chicken tenders",
@@ -8026,7 +8863,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cheesy-garlic-hawaiian-rolls",
@@ -8040,7 +8880,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Hawaiian rolls",
         "String cheese sticks",
@@ -8060,7 +8902,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Fun party food or side dish.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "beef-fried-rice-healthier",
@@ -8075,7 +8920,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Beef"
+        "Beef",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Ground beef",
@@ -8098,7 +8944,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "mini-seeded-loaf-no-store-bought-bread",
@@ -8112,7 +8961,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "6 heaped tbsp self-raising flour (or plain flour + 1/2 tsp baking powder)",
         "4 tbsp Greek or soya yoghurt",
@@ -8128,7 +8979,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Gluten-free version: use gluten-free self-raising flour + 1/3 tsp xanthan gum.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-bowl",
@@ -8145,7 +8999,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "6 oz chicken",
@@ -8167,7 +9022,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~500 calories, 57g protein per bowl.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "frozen-reese-s-bars",
@@ -8182,7 +9040,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 1/2 cups Greek yogurt (vanilla or plain)",
@@ -8200,7 +9059,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 6 servings; 18g protein per bar. Add 1/2 tsp coconut oil to the chocolate to help it melt smoothly; PB powder can be used instead of peanut butter for fewer calories.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "one-pan-cottage-cheese-fried-egg-skillet",
@@ -8216,6 +9078,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -8239,7 +9102,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "low-cal-in-n-out-animal-fries",
@@ -8254,7 +9120,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Potatoes, sliced into fries",
@@ -8280,7 +9147,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~364 cal, 10g protein per serving.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-flatbread",
@@ -8294,7 +9164,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Flatbread dough (or store-bought flatbread)",
         "White cheese sauce",
@@ -8312,7 +9184,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "strawberry-banana-pancakes",
@@ -8326,7 +9201,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "1 ripe banana",
         "2 ripe strawberries",
@@ -8344,7 +9221,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Suitable for baby-led weaning from 6 months.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "10-minute-chicken-green-bean-dinner",
@@ -8362,6 +9242,7 @@ window.PROVISION_DATA = {
         "Air Fryer",
         "Chicken",
         "Low Carb",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -8381,7 +9262,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Swap the honey for a sugar-free brown sweetener to make it fully keto.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "2-ingredient-artisan-bread-no-yeast-no-kneading",
@@ -8395,7 +9279,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Self-rising flour",
         "Plain yogurt",
@@ -8411,7 +9297,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "air-fryer-crispy-chicken-pizza-subs",
@@ -8428,7 +9317,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Air Fryer",
         "Chicken",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Hoagie buns",
@@ -8450,7 +9340,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "popcorn-chicken-high-protein",
@@ -8466,7 +9359,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "350g chicken pieces",
@@ -8482,7 +9376,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "596 kcal, 102g protein, 20g carbs, 12g fat per batch.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "gluten-free-chicken-ramen-noodle-bake",
@@ -8497,7 +9394,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Gluten-free ramen noodles",
@@ -8517,7 +9415,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "bacon-jalape-o-hot-corn-dip",
@@ -8532,6 +9433,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -8566,7 +9468,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "healthy-chicken-pizza-chicken-crust-pepperoni-pizza",
@@ -8584,6 +9489,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -8609,7 +9515,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~168g protein and ~1,400 kcal for the whole pizza.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-teriyaki-crispy-rice-cups",
@@ -8624,7 +9533,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cooked rice",
@@ -8644,7 +9554,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pepperoni-bread-blt",
@@ -8660,7 +9573,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "42 turkey pepperonis",
@@ -8681,7 +9595,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~360 cal, 44g protein, 11g carbs, 17g fat, 4g fiber. Use parchment or a silicone mat \u2014 the cheese sticks to metal or glass.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "lazy-high-protein-tuna-rice-bowl",
@@ -8698,6 +9615,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -8718,7 +9636,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Ready in about 5 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "greek-yogurt-mini-loaf",
@@ -8733,7 +9654,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "3 heaped tbsp (60g) self-raising flour (or plain flour + 1/2 tsp baking powder)",
@@ -8750,7 +9672,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Gluten-free version: use gluten-free self-raising flour + 1/3 tsp xanthan gum.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "10-minute-stuffed-protein-pizza",
@@ -8767,6 +9692,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -8790,7 +9716,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "538 cal, 49g protein per pizza.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "smashburger-tacos",
@@ -8806,7 +9735,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Beef",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Ground beef",
@@ -8826,7 +9756,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "bacon-wrapped-everything-bagel-stuffed-chicken-tenders",
@@ -8842,6 +9775,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -8861,7 +9795,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Ranch seasoning can be swapped in for extra flavor; turkey bacon can be used as an alternative.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pizza-omelette",
@@ -8878,6 +9815,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -8898,7 +9836,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~431 calories, 38g protein.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-queso-dip-with-seasoned-ground-beef",
@@ -8915,7 +9856,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Cottage Cheese",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Ground beef, seasoned",
@@ -8936,7 +9878,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 6 servings; per 1/2-cup serving: 176 cal, 22g protein, 7g fat, 4g carbs.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "marble-oat-cake",
@@ -8950,7 +9895,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "2 bananas, mashed (1 per bowl)",
         "60g tender oats (30g per bowl)",
@@ -8977,7 +9924,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Makes 8 bars; ~150 kcal and 8g protein per bar. Translated from German.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "easy-fajita-dinner-shrimp-fajita-veggies",
@@ -8993,6 +9943,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9011,7 +9962,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Quick low-carb dinner.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-stuffed-meatballs",
@@ -9028,6 +9982,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9048,7 +10003,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pizza-bowls",
@@ -9064,7 +10022,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Ground chicken",
@@ -9085,7 +10044,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "3-ingredient-cottage-cheese-chips",
@@ -9100,7 +10062,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -9118,7 +10081,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Also makes a good base topped with a tuna mixture, honey, diced mango, and avocado.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "ground-beef-tortilla-roll-ups",
@@ -9134,6 +10100,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Beef",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9156,7 +10123,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "zero-carb-crispy-pizza-bites",
@@ -9173,6 +10143,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "Low Carb",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9191,7 +10162,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "turkey-bacon-ranch-sliders",
@@ -9206,6 +10180,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9227,7 +10202,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "buffalo-chicken-pinwheels-2",
@@ -9242,7 +10220,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Chicken"
+        "Chicken",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Low-carb tortilla",
@@ -9263,7 +10242,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-pizza-bowl",
@@ -9280,7 +10262,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -9299,7 +10282,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "~400 kcal, 45g protein; gluten-free.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "2-ingredient-cottage-cheese-chips-air-fryer",
@@ -9315,7 +10301,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Air Fryer",
-        "Cottage Cheese"
+        "Cottage Cheese",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese",
@@ -9329,7 +10316,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "sausage-popper-boats",
@@ -9344,7 +10334,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Air Fryer"
+        "Air Fryer",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Italian sausage (e.g. Johnsonville brats)",
@@ -9362,7 +10353,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Variations work with different sausages, cheeses, pickles, or bacon-wrapped.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "blueberry-cookies",
@@ -9376,7 +10370,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Frozen blueberries, thawed",
         "Plant-based butter",
@@ -9398,7 +10394,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Recipe credited to Justine Doirion.\n\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "sriracha-mayo-chicken-skewers",
@@ -9414,6 +10413,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9431,7 +10431,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "garlic-butter-croissant-jalape-o-poppers",
@@ -9445,7 +10448,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Jalape\u00f1o peppers",
         "Cheddar cheese, sliced or in strips (or cheese of choice)",
@@ -9462,7 +10467,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "pesto-stuffed-crust-pizza-tortilla-pizza",
@@ -9479,6 +10487,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Healthified Comfort",
+        "Never Made Yet",
         "One Pan / Low Cleanup"
       ],
       "ingredients": [
@@ -9498,7 +10507,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-cottage-cheese-chips",
@@ -9514,7 +10526,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Cottage Cheese",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Cottage cheese (full-fat works best)",
@@ -9528,7 +10541,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-egg-rolls",
@@ -9562,7 +10578,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2026-03-15",
+      "firstCookedDate": "2026-03-15"
     },
     {
       "id": "high-protein-brownie-fudge-cookie-dough",
@@ -9578,7 +10597,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Greek Yogurt",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1/2 cup Greek yogurt",
@@ -9599,7 +10619,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Claimed 54g protein per batch. Several viewers found 1 tsp of salt too salty \u2014 start with 1/4\u20131/2 tsp and adjust.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "greek-yoghurt-heart-bread",
@@ -9616,6 +10639,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Greek Yogurt",
         "Healthified Comfort",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9632,7 +10656,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Serves 2. The same dough works for pizza bases, bagels, and pretzels.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-burger-bowl-loaded-fries",
@@ -9671,7 +10698,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-10-30",
+      "firstCookedDate": "2025-10-30"
     },
     {
       "id": "chocolate-avocado-donuts",
@@ -9686,6 +10716,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9707,7 +10738,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "A regular donut pan works too but they can stick a bit to the bottom.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chickles-cheesy-pickle-chips",
@@ -9721,7 +10755,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Sharp cheddar cheese slices, each cut into 4 squares",
         "Dill pickle chips, patted dry",
@@ -9736,7 +10772,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "upside-down-shallot-tart",
@@ -9750,7 +10789,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Olive oil spray",
         "Black peppercorns",
@@ -9770,7 +10811,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-stuffed-burger-log",
@@ -9786,7 +10830,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Beef",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 whole jalape\u00f1o",
@@ -9803,7 +10848,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cool-ranch-pepperoni-pizza-wrap",
@@ -9820,7 +10868,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Tortilla",
@@ -9840,7 +10889,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "easy-skillet-chicken-gyros",
@@ -9856,6 +10908,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
+        "Never Made Yet",
         "One Pan / Low Cleanup",
         "Quick (<20m)"
       ],
@@ -9878,7 +10931,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "jalape-o-popper-dip",
@@ -9893,6 +10949,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -9913,7 +10970,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "creamy-spicy-garlic-noodles-with-shrimp",
@@ -9927,7 +10987,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Shrimp, raw",
         "Red spicy marinade (e.g. gochujang-based)",
@@ -9952,7 +11014,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "hot-honey-bacon-whipped-goat-cheese-dip",
@@ -9966,7 +11031,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Whipped goat cheese (or cream cheese)",
         "Hot honey",
@@ -9983,7 +11050,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crispy-chipotle-chicken-tacos",
@@ -9999,7 +11069,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken thighs, cubed small",
@@ -10019,7 +11090,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chopped-italian-sliders",
@@ -10033,7 +11107,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Shredded lettuce",
         "Diced red onions",
@@ -10057,7 +11133,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "The cardboard tray the King's Hawaiian rolls come in is oven-safe and can be baked on directly.\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-gyro-in-a-loaf-pan",
@@ -10073,7 +11152,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Chicken",
-        "Greek Yogurt"
+        "Greek Yogurt",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Chicken breasts or thighs",
@@ -10097,7 +11177,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "ramen-lasagna",
@@ -10129,7 +11212,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-09-27",
+      "firstCookedDate": "2025-09-27"
     },
     {
       "id": "pizza-onion-ring-chips",
@@ -10144,7 +11230,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "White onion, thinly sliced into rings",
@@ -10163,7 +11250,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chicken-burger-bowl",
@@ -10180,7 +11270,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Chicken",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "French fries, hot",
@@ -10201,7 +11292,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "chopped-italian-sandwich",
@@ -10234,7 +11328,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 1,
+      "lastCookedDate": "2025-08-30",
+      "firstCookedDate": "2025-08-30"
     },
     {
       "id": "ham-swiss-croissant-bake",
@@ -10248,7 +11345,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "Croissants, sliced into thirds",
         "Eggs",
@@ -10271,7 +11370,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "2-ingredient-parmesan-balls",
@@ -10288,6 +11390,7 @@ window.PROVISION_DATA = {
       "tags": [
         "High Protein",
         "Low Carb",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -10305,7 +11408,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "High protein and low carb. Viewers report they can be quite salty \u2014 use less cheese per bite or serve with a mild dip.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "smashed-sausage-breakfast-tacos",
@@ -10321,7 +11427,8 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "Beef",
-        "Healthified Comfort"
+        "Healthified Comfort",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Spicy Italian sausage",
@@ -10341,7 +11448,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "homemade-mozzarella-2-ingredients",
@@ -10355,7 +11465,9 @@ window.PROVISION_DATA = {
         "carbs": null,
         "fat": null
       },
-      "tags": [],
+      "tags": [
+        "Never Made Yet"
+      ],
       "ingredients": [
         "2 litres whole milk",
         "~120 ml white vinegar"
@@ -10370,7 +11482,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Some viewers note the result resembles paneer or ricotta more than true mozzarella (which uses rennet). The creator also makes a sandwich with the cheese: fresh tomato, basil, hot honey, and butter.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "murtabak-maggie-ramen-omelette",
@@ -10385,7 +11500,8 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
-        "Beef"
+        "Beef",
+        "Never Made Yet"
       ],
       "ingredients": [
         "1 pack instant ramen (e.g. Maggi)",
@@ -10405,7 +11521,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "crispy-greek-yogurt-marinated-chicken",
@@ -10422,6 +11541,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "Greek Yogurt",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [
@@ -10439,7 +11559,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-air-fryer-bagels",
@@ -10456,6 +11579,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Air Fryer",
         "High Protein",
+        "Never Made Yet",
         "Quick (<20m)"
       ],
       "ingredients": [],
@@ -10468,7 +11592,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "About 147 calories and 9g protein per bagel. Also works in the oven at 350\u00b0F for 20 minutes.\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "high-protein-burger-with-onion-cheese-buns",
@@ -10485,7 +11612,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Beef",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "Potatoes, cut into strips (for baked fries)",
@@ -10508,7 +11636,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "cottage-cheese-pizza-toast-margherita",
@@ -10525,7 +11656,8 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
-        "High Protein"
+        "High Protein",
+        "Never Made Yet"
       ],
       "ingredients": [
         "2 slices sourdough bread",
@@ -10544,7 +11676,10 @@ window.PROVISION_DATA = {
       ],
       "notes": "Advertised as 35g protein for the two slices.\n*Some details weren't clear from the video \u2014 check the reel for specifics.*\n\n---",
       "isReconstructed": false,
-      "source": "Instagram"
+      "source": "Instagram",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-greek-yogurt-power-bowl",
@@ -10576,7 +11711,10 @@ window.PROVISION_DATA = {
       "notes": "52g Protein \u00b7 485 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 2,
+      "lastCookedDate": "2026-08-24",
+      "firstCookedDate": "2026-08-03"
     },
     {
       "id": "prov-cottage-scramble",
@@ -10593,6 +11731,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -10608,7 +11747,10 @@ window.PROVISION_DATA = {
       "notes": "42g Protein \u00b7 645 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-bagel-eggs",
@@ -10624,6 +11766,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10637,7 +11780,10 @@ window.PROVISION_DATA = {
       "notes": "35g Protein \u00b7 490 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 11,
+      "lastCookedDate": "2025-11-19",
+      "firstCookedDate": "2025-07-04"
     },
     {
       "id": "prov-breakfast-burrito",
@@ -10654,6 +11800,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10670,7 +11817,10 @@ window.PROVISION_DATA = {
       "notes": "30g Protein \u00b7 410 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 23,
+      "lastCookedDate": "2026-10-04",
+      "firstCookedDate": "2025-07-19"
     },
     {
       "id": "prov-avocado-toast-upgraded",
@@ -10686,6 +11836,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10701,7 +11852,10 @@ window.PROVISION_DATA = {
       "notes": "30g Protein \u00b7 525 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 39,
+      "lastCookedDate": "2026-10-03",
+      "firstCookedDate": "2025-07-11"
     },
     {
       "id": "prov-greek-yogurt-bowl",
@@ -10719,6 +11873,7 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -10733,7 +11888,10 @@ window.PROVISION_DATA = {
       "notes": "30g Protein \u00b7 350 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-turkey-cottage-wrap",
@@ -10750,6 +11908,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "High Protein",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -10769,7 +11928,10 @@ window.PROVISION_DATA = {
       "notes": "48g Protein \u00b7 540 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-chicken-wrap",
@@ -10786,6 +11948,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10800,7 +11963,10 @@ window.PROVISION_DATA = {
       "notes": "42g Protein \u00b7 435 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 77,
+      "lastCookedDate": "2026-10-03",
+      "firstCookedDate": "2025-07-13"
     },
     {
       "id": "prov-turkey-wrap",
@@ -10816,6 +11982,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10834,7 +12001,10 @@ window.PROVISION_DATA = {
       "notes": "38g Protein \u00b7 450 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 33,
+      "lastCookedDate": "2026-07-28",
+      "firstCookedDate": "2025-07-09"
     },
     {
       "id": "prov-chicken-lettuce-wraps",
@@ -10851,6 +12021,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -10866,7 +12037,10 @@ window.PROVISION_DATA = {
       "notes": "30g Protein \u00b7 400 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-chicken-sandwich",
@@ -10883,6 +12057,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10902,7 +12077,10 @@ window.PROVISION_DATA = {
       "notes": "~45g Protein \u00b7 ~520 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 22,
+      "lastCookedDate": "2026-10-04",
+      "firstCookedDate": "2025-07-26"
     },
     {
       "id": "prov-chicken-pasta",
@@ -10920,6 +12098,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10934,7 +12113,10 @@ window.PROVISION_DATA = {
       "notes": "57g Protein \u00b7 580 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 10,
+      "lastCookedDate": "2026-10-04",
+      "firstCookedDate": "2025-08-22"
     },
     {
       "id": "prov-turkey-taco-bowl",
@@ -10951,6 +12133,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -10970,7 +12153,10 @@ window.PROVISION_DATA = {
       "notes": "43g Protein \u00b7 480 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 7,
+      "lastCookedDate": "2026-07-24",
+      "firstCookedDate": "2026-04-15"
     },
     {
       "id": "prov-chicken-tortilla-pizza",
@@ -10988,6 +12174,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -11005,7 +12192,10 @@ window.PROVISION_DATA = {
       "notes": "43g Protein \u00b7 355 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 23,
+      "lastCookedDate": "2026-09-21",
+      "firstCookedDate": "2025-07-04"
     },
     {
       "id": "prov-chicken-burrito-bowl",
@@ -11023,6 +12213,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -11039,7 +12230,10 @@ window.PROVISION_DATA = {
       "notes": "42g Protein \u00b7 683 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 21,
+      "lastCookedDate": "2026-09-13",
+      "firstCookedDate": "2025-07-16"
     },
     {
       "id": "prov-fajitas",
@@ -11073,7 +12267,10 @@ window.PROVISION_DATA = {
       "notes": "45g Protein \u00b7 850 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 4,
+      "lastCookedDate": "2026-06-10",
+      "firstCookedDate": "2026-01-13"
     },
     {
       "id": "prov-chicken-tikka-masala",
@@ -11090,6 +12287,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Chicken",
         "High Protein",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -11105,7 +12303,10 @@ window.PROVISION_DATA = {
       "notes": "68g Protein \u00b7 840 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-smash-burger-bowl",
@@ -11122,6 +12323,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -11138,7 +12340,10 @@ window.PROVISION_DATA = {
       "notes": "39g Protein \u00b7 550 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 6,
+      "lastCookedDate": "2026-07-03",
+      "firstCookedDate": "2025-07-11"
     },
     {
       "id": "prov-flying-dutchman",
@@ -11169,7 +12374,10 @@ window.PROVISION_DATA = {
       "notes": "42g Protein \u00b7 610 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 1,
+      "lastCookedDate": "2026-04-10",
+      "firstCookedDate": "2026-04-10"
     },
     {
       "id": "prov-patty-melt",
@@ -11185,6 +12393,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -11201,7 +12410,10 @@ window.PROVISION_DATA = {
       "notes": "46g Protein \u00b7 620 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 6,
+      "lastCookedDate": "2026-08-23",
+      "firstCookedDate": "2026-03-10"
     },
     {
       "id": "prov-chicken-tacos",
@@ -11219,6 +12431,7 @@ window.PROVISION_DATA = {
         "Chicken",
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -11236,7 +12449,10 @@ window.PROVISION_DATA = {
       "notes": "30g Protein \u00b7 400 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 8,
+      "lastCookedDate": "2026-08-10",
+      "firstCookedDate": "2025-07-21"
     },
     {
       "id": "prov-nutritional-yeast-popcorn",
@@ -11251,6 +12467,7 @@ window.PROVISION_DATA = {
         "fat": null
       },
       "tags": [
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -11266,7 +12483,10 @@ window.PROVISION_DATA = {
       "notes": "11g Protein \u00b7 135 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-savory-cottage-bowl",
@@ -11283,6 +12503,7 @@ window.PROVISION_DATA = {
       "tags": [
         "Cottage Cheese",
         "Healthified Comfort",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -11296,7 +12517,10 @@ window.PROVISION_DATA = {
       "notes": "25g Protein \u00b7 180 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     },
     {
       "id": "prov-emergency-shake",
@@ -11312,6 +12536,7 @@ window.PROVISION_DATA = {
       },
       "tags": [
         "High Protein",
+        "Never Made Yet",
         "Provision Original"
       ],
       "ingredients": [
@@ -11325,7 +12550,10 @@ window.PROVISION_DATA = {
       "notes": "31g Protein \u00b7 220 cal",
       "isReconstructed": false,
       "isProvisionOriginal": true,
-      "source": "Provision Classic"
+      "source": "Provision Classic",
+      "timesCooked": 0,
+      "lastCookedDate": null,
+      "firstCookedDate": null
     }
   ],
   "notebook": [
