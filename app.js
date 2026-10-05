@@ -574,10 +574,16 @@
           <img src="${imageUrl}" alt="${escapeHtml(recipe.title)}" class="card-photo-img" loading="lazy">
           <div class="card-photo-overlay">
             <div class="card-top-row" style="margin-bottom: 0;">
-              <span class="card-source-badge">
-                ${recipe.isProvisionOriginal ? '🏛️ ' : '📸 '}
-                ${escapeHtml(authorText)}
-              </span>
+              ${recipe.reelUrl ? `
+                <a href="${recipe.reelUrl}" target="_blank" rel="noopener" class="card-source-badge" title="Watch reel on Instagram" onclick="event.stopPropagation();">
+                  📸 ${escapeHtml(authorText)} ↗
+                </a>
+              ` : `
+                <span class="card-source-badge">
+                  ${recipe.isProvisionOriginal ? '🏛️ ' : '📸 '}
+                  ${escapeHtml(authorText)}
+                </span>
+              `}
               <button class="card-fav-btn ${isFav ? 'favorited' : ''}" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -615,10 +621,16 @@
         <div>
           <div class="card-top-row">
             <div style="display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap;">
-              <span class="card-source-badge">
-                ${recipe.isProvisionOriginal ? '🏛️ ' : '📸 '}
-                ${escapeHtml(authorText)}
-              </span>
+              ${recipe.reelUrl ? `
+                <a href="${recipe.reelUrl}" target="_blank" rel="noopener" class="card-source-badge" title="Watch reel on Instagram" onclick="event.stopPropagation();">
+                  📸 ${escapeHtml(authorText)} ↗
+                </a>
+              ` : `
+                <span class="card-source-badge">
+                  ${recipe.isProvisionOriginal ? '🏛️ ' : '📸 '}
+                  ${escapeHtml(authorText)}
+                </span>
+              `}
               ${cookBadgeHtml}
             </div>
             <button class="card-fav-btn ${isFav ? 'favorited' : ''}" title="${isFav ? 'Remove from favorites' : 'Save to favorites'}">

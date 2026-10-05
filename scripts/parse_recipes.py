@@ -123,9 +123,10 @@ def main():
         lines = chunk.split('\n')
         title = lines[0].replace('##', '').strip()
         
-        by_match = re.search(r'\*\*By:\*\*\s*(.*?)(?:\s*·\s*\[View reel\]\((https?://[^\)]+)\))?', chunk)
-        author = by_match.group(1).strip() if by_match else ''
-        reel_url = by_match.group(2).strip() if (by_match and by_match.group(2)) else ''
+        author_match = re.search(r'\*\*By:\*\*\s*(.*?)(?:\s*·|\s*\n|\Z)', chunk)
+        author = author_match.group(1).strip() if author_match else ''
+        reel_match = re.search(r'\[View reel\]\((https?://[^\)]+)\)', chunk)
+        reel_url = reel_match.group(1).strip() if reel_match else ''
         
         ing_match = re.search(r'\*\*Ingredients\*\*\s*\n([\s\S]*?)(?=\n\*\*(?:Instructions|Method|Notes|Note)\*\*|\Z)', chunk)
         ingredients = []
