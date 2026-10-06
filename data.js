@@ -173,8 +173,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 39,
-      "lastCookedDate": "2026-10-03",
+      "timesCooked": 40,
+      "lastCookedDate": "2026-10-05",
       "firstCookedDate": "2025-07-11"
     },
     {
@@ -284,8 +284,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 77,
-      "lastCookedDate": "2026-10-03",
+      "timesCooked": 78,
+      "lastCookedDate": "2026-10-05",
       "firstCookedDate": "2025-07-13"
     },
     {
@@ -1065,8 +1065,8 @@ window.PROVISION_DATA = {
       "notes": "Makes 4. Per slider: 435 calories | 41.6g protein | 13.3g fat | 35.9g carbs.\n\n---",
       "isReconstructed": false,
       "source": "Instagram",
-      "timesCooked": 5,
-      "lastCookedDate": "2026-04-09",
+      "timesCooked": 6,
+      "lastCookedDate": "2026-10-05",
       "firstCookedDate": "2025-07-23"
     },
     {
