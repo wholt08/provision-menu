@@ -284,8 +284,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 83,
-      "lastCookedDate": "2026-10-10",
+      "timesCooked": 84,
+      "lastCookedDate": "2026-10-12",
       "firstCookedDate": "2025-07-13"
     },
     {
@@ -3836,8 +3836,8 @@ window.PROVISION_DATA = {
       "notes": "430 kcal, 30 g protein, 47 g carbs, 15 g fat.\n\n---",
       "isReconstructed": false,
       "source": "Instagram",
-      "timesCooked": 3,
-      "lastCookedDate": "2025-11-28",
+      "timesCooked": 4,
+      "lastCookedDate": "2026-10-12",
       "firstCookedDate": "2025-07-06"
     },
     {
