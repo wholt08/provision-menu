@@ -284,8 +284,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 84,
-      "lastCookedDate": "2026-10-12",
+      "timesCooked": 85,
+      "lastCookedDate": "2026-10-13",
       "firstCookedDate": "2025-07-13"
     },
     {
@@ -434,8 +434,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 11,
-      "lastCookedDate": "2026-10-07",
+      "timesCooked": 12,
+      "lastCookedDate": "2026-10-13",
       "firstCookedDate": "2025-08-22"
     },
     {
