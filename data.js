@@ -17,6 +17,7 @@ window.PROVISION_DATA = {
         "Greek Yogurt",
         "Healthified Comfort",
         "High Protein",
+        "High Rotation (5+)",
         "Provision Original"
       ],
       "ingredients": [
@@ -32,8 +33,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 4,
-      "lastCookedDate": "2026-10-06",
+      "timesCooked": 5,
+      "lastCookedDate": "2026-10-14",
       "firstCookedDate": "2025-11-21"
     },
     {
@@ -173,8 +174,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 42,
-      "lastCookedDate": "2026-10-11",
+      "timesCooked": 43,
+      "lastCookedDate": "2026-10-14",
       "firstCookedDate": "2025-07-11"
     },
     {
@@ -284,8 +285,8 @@ window.PROVISION_DATA = {
       "isReconstructed": false,
       "isProvisionOriginal": true,
       "source": "Provision Classic",
-      "timesCooked": 85,
-      "lastCookedDate": "2026-10-13",
+      "timesCooked": 86,
+      "lastCookedDate": "2026-10-14",
       "firstCookedDate": "2025-07-13"
     },
     {
